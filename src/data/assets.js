@@ -1,7 +1,6 @@
 const imageModules = import.meta.glob([
   "../../assets/images/**/*.{jpg,jpeg,png,webp,svg}",
-  "!../../assets/images/pages/anemometers.png",
-  "!../../assets/images/industries/**"
+  "!../../assets/images/pages/anemometers.png"
 ], {
   eager: true,
   import: "default",

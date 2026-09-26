@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ShieldCheckIcon } from "./Icons";
 
 const verificationEndpoint = import.meta.env.VITE_CERTIFICATE_API_URL;
 
@@ -49,13 +48,8 @@ export default function CertificateVerify() {
 
   return (
     <form className="contact-form verify-form reveal reveal-right" onSubmit={handleSubmit}>
-      <div className="verify-head">
-        <span className="verify-head-icon" aria-hidden="true"><ShieldCheckIcon /></span>
-        <div className="verify-head-text">
-          <h3>Certificate Verification Portal</h3>
-          <p>Enter the details printed on your calibration certificate.</p>
-        </div>
-      </div>
+      <h3>Certificate Verification Portal</h3>
+      <p>Enter the details printed on your calibration certificate.</p>
       <div className="form-grid">
         <div className="form-field">
           <label htmlFor="certificate-number">Calibration Certificate Number</label>
@@ -68,9 +62,12 @@ export default function CertificateVerify() {
       </div>
       <button className="button" type="submit">
         <span>Verify Certificate</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 12.5 11 14.5 15.5 9.5" fill="none" stroke="currentColor" strokeWidth="1.8" /></svg>
       </button>
-      <p className={`form-status${result ? " is-visible" : ""}${result ? ` is-${result.tone}` : ""}`} role="status" aria-live="polite">
+      <p
+        className={`form-status${result ? " is-visible" : ""}${result ? ` is-${result.tone}` : ""}`}
+        role="status"
+        aria-live="polite"
+      >
         {result?.message || ""}
       </p>
       {result?.tone === "notice" ? (

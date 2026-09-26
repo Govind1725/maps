@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/common/PageHero";
+import SectionHeading from "../components/common/SectionHeading";
 import { ArrowIcon } from "../components/common/Icons";
 
 export default function NotFoundPage() {
@@ -7,11 +8,15 @@ export default function NotFoundPage() {
     <>
       <PageHero image="pages/lab-wide.webp" title="Page Not Found" />
       <section className="section">
-        <div className="container section-heading">
-          <h2>We could not find that page</h2>
+        <SectionHeading
+          className="container"
+          eyebrow="Error 404"
+          title="We could not find"
+          highlight="that page"
+        >
           <p>The requested page does not exist or may have moved.</p>
           <Link className="button" to="/"><span>Back to Home</span><ArrowIcon /></Link>
-        </div>
+        </SectionHeading>
       </section>
     </>
   );

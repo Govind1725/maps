@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mfg-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="mfg-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#mfg-bg)" />
+  
+  <!-- Industrial Robotic Arm Silhouette -->
+  <g transform="translate(100, 30)">
+    <rect x="20" y="130" width="60" height="20" rx="4" fill="#64748b" />
+    <circle cx="50" cy="120" r="18" fill="#475569" stroke="#f97316" stroke-width="2" />
+    <path d="M50 120 L90 50 L140 70 L200 40" stroke="url(#mfg-orange)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="90" cy="50" r="10" fill="#f97316" />
+    <circle cx="140" cy="70" r="8" fill="#f97316" />
+    <circle cx="200" cy="40" r="12" fill="#fb923c" stroke="#ffffff" stroke-width="2" />
+    <!-- Sparks -->
+    <path d="M200 40 L220 20 M200 40 L230 45 M200 40 L215 65" stroke="#fef08a" stroke-width="2" stroke-linecap="round" />
+  </g>
+  
+  <!-- Factory gear watermark -->
+  <circle cx="330" cy="140" r="50" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="12" stroke-dasharray="10 10" />
+</svg>

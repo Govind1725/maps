@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="av-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#av-bg)" />
+  
+  <!-- Jet Airplane Silhouette Flying -->
+  <g transform="translate(80, 40) rotate(-15)">
+    <path d="M220 50 L100 45 L50 20 L40 25 L75 50 L30 50 L15 35 L5 38 L18 55 L5 72 L15 75 L30 60 L75 60 L40 85 L50 90 L100 65 L220 60 Q240 55 220 50 Z" fill="#ffffff" opacity="0.95" />
+    <!-- Jet contrails -->
+    <line x1="0" y1="52" x2="-100" y2="52" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-dasharray="6 4" />
+    <line x1="0" y1="58" x2="-100" y2="58" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-dasharray="6 4" />
+  </g>
+  
+  <!-- Compass / Radar rings -->
+  <circle cx="300" cy="100" r="70" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none" />
+  <circle cx="300" cy="100" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4" fill="none" />
+  <line x1="300" y1="20" x2="300" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  <line x1="220" y1="100" x2="380" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="auto-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="auto-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#auto-bg)" />
+  
+  <!-- Workshop Light Rays / Grid -->
+  <line x1="50" y1="0" x2="150" y2="200" stroke="rgba(56,189,248,0.15)" stroke-width="2" />
+  <line x1="120" y1="0" x2="220" y2="200" stroke="rgba(56,189,248,0.15)" stroke-width="2" />
+  <line x1="190" y1="0" x2="290" y2="200" stroke="rgba(56,189,248,0.15)" stroke-width="2" />
+  
+  <!-- Sleek Car Silhouette -->
+  <g transform="translate(60, 65)">
+    <path d="M20 70 Q40 68 70 45 Q110 20 180 20 Q220 20 240 45 Q260 50 280 60 Q290 70 290 85 L10 85 Z" fill="none" stroke="url(#auto-cyan)" stroke-width="4" stroke-linecap="round" />
+    <path d="M80 43 Q120 28 175 28 Q210 28 228 43 Z" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1.5" />
+    <!-- Headlight beam -->
+    <polygon points="280,60 400,30 400,90 285,75" fill="rgba(56,189,248,0.15)" />
+    <!-- Wheels -->
+    <circle cx="65" cy="85" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+    <circle cx="65" cy="85" r="8" fill="#38bdf8" />
+    <circle cx="235" cy="85" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+    <circle cx="235" cy="85" r="8" fill="#38bdf8" />
+  </g>
+</svg>

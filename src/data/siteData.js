@@ -66,20 +66,17 @@ export const rentalServices = [
   "Pressure Lab",
   "Mechanical Lab",
   "Dimension Calibration Lab",
-  "Analytical & Gas Calibration Lab",
+  "Common Calibration Lab",
   "Air Flow & Velocity Calibration Lab"
 ];
 
 export const industries = [
-  { label: "Engineering Industries", icon: "engineering" },
-  { label: "Aerospace", icon: "aerospace" },
-  { label: "Pharma & Food Industries", icon: "pharma" },
-  { label: "Oil & Gas", icon: "oil-gas" },
-  { label: "Automotive Industry", icon: "automotive" },
-  { label: "Electrical Industries", icon: "electrical" },
-  { label: "Cement Industries", icon: "cement" },
-  { label: "Defense & Government Sector", icon: "defense" },
-  { label: "Testing Laboratories", icon: "laboratory" }
+  { label: "Information Technology", title: "Information Technology", icon: "information-technology" },
+  { label: "Healthcare Industry", title: "Healthcare Industry", icon: "healthcare" },
+  { label: "Automobile industry", title: "Automobile Industry", icon: "automobile" },
+  { label: "Manudacturing Industry", title: "Manufacturing Industry", icon: "manufacturing" },
+  { label: "Aviation industry", title: "Aviation Industry", icon: "aviation" },
+  { label: "Gas & Oil Industry", title: "Gas & Oil Industry", icon: "gas-oil" }
 ];
 
 export const aboutText = "Techno Prime company limited (Techno Labs) was established in year 2021 having operations in KSA, & UAE covering the Middle East Region. Our Techno Labs is accredited for ISO/IEC 17025:2005 by EJ-JAS and SAC approval is in process. We provide calibration & repair services for measuring & testing instruments. We cover various industrial segments such as Engineering Industries, Aero Space, Pharma/Food Industries, Oil & Gas, Automotive industry, Electrical Industries, Cement Industries, Defense /Government Sector Industries, Testing Laboratories etc.";

@@ -1,87 +1,83 @@
-export function ArrowIcon({ direction = "right" }) {
-  const path = direction === "left" ? "m15 5-7 7 7 7" : "m9 5 7 7-7 7";
+export function ChevronIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d={path} fill="none" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  );
-}
-
-export function ChevronIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 10 6">
+    <svg className={className} aria-hidden="true" viewBox="0 0 10 6">
       <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   );
 }
 
-export function ShieldCheckIcon() {
+export function ArrowIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M12 3 5 5.6v5.6c0 4.3 2.8 7.2 7 8.8 4.2-1.6 7-4.5 7-8.8V5.6L12 3Z" />
-      <path d="m9 11.6 2.2 2.2 4-4.4" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
-export function ClockIcon() {
+export function ArrowLeftIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="8.4" />
-      <path d="M12 7.4V12l3 2" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
-export function GlobeIcon() {
+export function ArrowRightIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="8.4" />
-      <path d="M3.6 12h16.8M12 3.6c2.1 2.3 3.2 5.2 3.2 8.4s-1.1 6.1-3.2 8.4c-2.1-2.3-3.2-5.2-3.2-8.4S9.9 5.9 12 3.6Z" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 }
 
-export function CalendarIcon() {
+export function PinIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <rect x="3.6" y="5.2" width="16.8" height="15.2" rx="1.6" />
-      <path d="M3.6 10h16.8M8.4 3.4v3.4M15.6 3.4v3.4" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+      />
     </svg>
   );
 }
 
-export function PinIcon() {
+export function MailIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" />
-      <circle cx="12" cy="10" r="2.6" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M3 5h18v14H3V5Zm2 2v.4l7 4.2 7-4.2V7H5Zm14 2.7-6.4 3.8a1 1 0 0 1-1.2 0L5 9.7V17h14V9.7Z"
+      />
     </svg>
   );
 }
 
-export function MailIcon() {
+export function PhoneIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <rect x="3.4" y="5.6" width="17.2" height="12.8" rx="1.4" />
-      <path d="m3.9 6.6 8.1 5.9 8.1-5.9" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2Z"
+      />
     </svg>
   );
 }
 
-export function PhoneIcon() {
+export function SendIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M7.2 3.5h2.9l1.5 3.9-2 1.5a12.4 12.4 0 0 0 5.5 5.5l1.5-2 3.9 1.5v2.9a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 5.2 5.7a2 2 0 0 1 2-2.2Z" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path d="m3 11 18-8-7 18-3-7-8-3Z" fill="none" stroke="currentColor" strokeWidth="1.8" />
     </svg>
   );
 }
 
-export function SendIcon() {
+export function WhatsAppIcon({ className = "" }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M20.8 3.4 3.6 10.2l6.6 2.6 2.6 6.6 8-15.6Z" />
-      <path d="M20.8 3.4 10.2 12.8" />
+    <svg className={className} aria-hidden="true" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.2l-.8 1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.6l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 2 .8 2.8.9 3.8.8.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.2Z"
+      />
     </svg>
   );
 }

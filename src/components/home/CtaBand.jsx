@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import { ArrowIcon } from "../common/Icons";
+import SectionHeading from "../common/SectionHeading";
 
 export default function CtaBand() {
   return (
     <section className="section cta-section">
       <div className="container">
         <div className="cta-panel reveal reveal-zoom">
-          <p className="eyebrow cta-eyebrow">Accredited Calibration</p>
-          <h2>Accredited, Traceable Calibration for Every Instrument</h2>
+          <SectionHeading
+            className="cta-heading"
+            eyebrow="Accredited Calibration"
+            title="Accredited, Traceable"
+            highlight="Calibration for Every Instrument"
+          />
           <p className="cta-text">
             Techno Labs is accredited for ISO/IEC 17025:2005 by EJ-JAS, with SAC approval in process. Send us your instrument
             requirements for calibration or repair, or verify a calibration certificate issued by our laboratory.
