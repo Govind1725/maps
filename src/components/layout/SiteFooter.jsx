@@ -59,12 +59,14 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="footer-legal">
-          <span>Copyright © 2026 Technoprime Ltd.</span>
-          <span>All Rights Reserved</span>
-          <span>
-            Designed By :{" "}
-            <a href="https://digitalsystems.com" target="_blank" rel="noreferrer">Digital Systems</a>
-          </span>
+          <div className="container footer-legal-inner">
+            <span>Copyright © 2026 Technoprime Ltd.</span>
+            <span>All Rights Reserved</span>
+            <span>
+              Designed By :{" "}
+              <a href="https://digitalsystems.com" target="_blank" rel="noreferrer">Jcode Digital Systems</a>
+            </span>
+          </div>
         </div>
       </footer>
       <a className="whatsapp" href={whatsappHref} target="_blank" rel="noreferrer" aria-label="Open WhatsApp chat">
