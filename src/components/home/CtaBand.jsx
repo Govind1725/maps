@@ -22,7 +22,7 @@ export default function CtaBand() {
               <span>Request Calibration</span>
               <ArrowIcon />
             </Link>
-            <Link className="button button--ghost" to="/certificate#verify">
+            <Link className="button button--ghost" to="/certificate">
               <span>Verify Certificate</span>
               <ArrowIcon />
             </Link>

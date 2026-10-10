@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { asset } from "../../data/assets";
-import { ArrowLeftIcon, ArrowRightIcon } from "../common/Icons";
+import { ArrowIcon, ArrowLeftIcon, ArrowRightIcon } from "../common/Icons";
 
 const slides = ["home/hero-1.jpg", "home/hero-2.jpg", "home/hero-3.jpg"];
 const interval = 5000;
@@ -47,23 +48,44 @@ export default function HeroCarousel() {
   return (
     <section className="accreditation-hero" aria-label="Accreditation highlights">
       <div className="hero-track" style={{ transform: `translate3d(-${active * 100}%, 0, 0)` }}>
-        {slides.map((slide, index) => (
+        {slides.map((slide) => (
           <div
-            className={`hero-slide${index === active ? " is-active" : ""}`}
+            className="hero-slide"
             style={{ backgroundImage: `url('${asset(slide)}')` }}
-            aria-hidden={index === active ? "false" : "true"}
+            aria-hidden="true"
             key={slide}
-          >
-            <div className="hero-slide-content">
-              <p className="hero-slide-title">
-                <StaggerText text={lineOne} />
-              </p>
-              <p className="hero-slide-copy">
-                <StaggerText text={lineTwo} startDelay={lineTwoDelay} />
-              </p>
-            </div>
-          </div>
+          />
         ))}
+      </div>
+      <div className="hero-overlay">
+        <div className="hero-content" key={active}>
+          <h2 className="hero-slide-title">
+            <StaggerText text={lineOne} />
+          </h2>
+          <p className="hero-slide-copy">
+            <StaggerText text={lineTwo} startDelay={lineTwoDelay} />
+          </p>
+        </div>
+        <div className="hero-actions">
+          <Link className="button hero-btn" to="/services">
+            Explore Our Services <ArrowIcon />
+          </Link>
+          <Link className="button hero-btn hero-btn--ghost" to="/contact">
+            Get a Quote
+          </Link>
+        </div>
+        <div className="hero-dots" role="group" aria-label="Slide navigation">
+          {slides.map((slide, index) => (
+            <button
+              className={`hero-dot${index === active ? " is-active" : ""}`}
+              type="button"
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === active}
+              onClick={() => setActive(index)}
+              key={slide}
+            />
+          ))}
+        </div>
       </div>
       <button className="hero-arrow hero-arrow--prev" type="button" aria-label="Previous slide" onClick={() => move(-1)}>
         <ArrowLeftIcon />
@@ -71,6 +93,10 @@ export default function HeroCarousel() {
       <button className="hero-arrow hero-arrow--next" type="button" aria-label="Next slide" onClick={() => move(1)}>
         <ArrowRightIcon />
       </button>
+      <div className="hero-scroll" aria-hidden="true">
+        Scroll
+        <span />
+      </div>
     </section>
   );
 }

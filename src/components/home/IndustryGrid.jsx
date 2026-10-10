@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { asset } from "../../data/assets";
 import SectionHeading from "../common/SectionHeading";
+import CountUp from "../common/CountUp";
 
 export function ArrowRightIcon({ className = "" }) {
   return (
@@ -121,17 +122,17 @@ export default function IndustryGrid() {
 
             <div className="expertise-stats">
               <div className="stat-item">
-                <span className="stat-num">6+</span>
+                <span className="stat-num"><CountUp value={6} suffix="+" /></span>
                 <span className="stat-lbl">Industries<br />Covered</span>
               </div>
               <div className="stat-divider"></div>
               <div className="stat-item">
-                <span className="stat-num">500+</span>
+                <span className="stat-num"><CountUp value={500} suffix="+" /></span>
                 <span className="stat-lbl">Clients<br />Worldwide</span>
               </div>
               <div className="stat-divider"></div>
               <div className="stat-item">
-                <span className="stat-num">99.9%</span>
+                <span className="stat-num"><CountUp value={99.9} suffix="%" /></span>
                 <span className="stat-lbl">Accuracy<br />&amp; Reliability</span>
               </div>
             </div>

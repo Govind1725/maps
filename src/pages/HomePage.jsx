@@ -3,6 +3,7 @@ import CalibrationBanner from "../components/home/CalibrationBanner";
 import { AboutIntro } from "../components/home/AboutIntro";
 import ServicesTabs from "../components/services/ServicesTabs";
 import IndustryGrid from "../components/home/IndustryGrid";
+import CtaBand from "../components/home/CtaBand";
 import ClientMarquee from "../components/home/ClientMarquee";
 import SocialLinks from "../components/common/SocialLinks";
 import SectionHeading from "../components/common/SectionHeading";
@@ -73,6 +74,7 @@ export default function HomePage() {
         <ClientMarquee start={1} end={8} direction="left" />
         <ClientMarquee start={9} end={17} direction="right" />
       </section>
+      <CtaBand />
     </>
   );
 }

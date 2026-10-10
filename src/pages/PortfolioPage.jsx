@@ -33,7 +33,7 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <PageHero image="pages/lab-wide.webp" title="Our Happy Clients" />
+      <PageHero image="pages/lab-wide.webp" title="Portfolio" />
       <section className="container portfolio-gallery" aria-label="Portfolio">
         <button className="portfolio-item reveal reveal-zoom" type="button" ref={triggerRef} onClick={() => setOpen(true)} aria-label="Open portfolio image">
           <img src={portfolioImage} alt="Technolabs portfolio" width="757" height="1600" loading="lazy" />

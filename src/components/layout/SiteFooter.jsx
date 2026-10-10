@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { asset } from "../../data/assets";
 import SocialLinks from "../common/SocialLinks";
-import { WhatsAppIcon } from "../common/Icons";
+import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "../common/Icons";
 
 const quickLinks = [
   { to: "/", label: "Home" },
@@ -52,9 +52,18 @@ export default function SiteFooter() {
           <div>
             <h2 className="footer-heading">Contact Us</h2>
             <address className="footer-contact">
-              <span>#1&amp;11, Ground Floor, 8303, Ayoub Ibn Wareth Street, Al Malaz, Riyadh-12841, KSA</span>
-              <a href="mailto:info@technoprimeltd.com">info@technoprimeltd.com</a>
-              <a href="tel:+966114644399">+966 11 464 4399</a>
+              <span className="footer-contact-item">
+                <PinIcon className="footer-contact-icon" />
+                <span>#1&amp;11, Ground Floor, 8303, Ayoub Ibn Wareth Street, Al Malaz, Riyadh-12841, KSA</span>
+              </span>
+              <a className="footer-contact-item" href="mailto:info@technoprimeltd.com">
+                <MailIcon className="footer-contact-icon" />
+                <span>info@technoprimeltd.com</span>
+              </a>
+              <a className="footer-contact-item" href="tel:+966114644399">
+                <PhoneIcon className="footer-contact-icon" />
+                <span>+966 11 464 4399</span>
+              </a>
             </address>
           </div>
         </div>
