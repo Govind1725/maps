@@ -2,56 +2,56 @@ export const routeMeta = {
   home: {
     path: "/",
     page: "home",
-    title: "Technolabs",
-    label: "Technolabs",
-    description: "Technolabs provides accurate calibration, repair, and rental solutions for measuring and testing instruments across the Middle East."
+    title: "MAPS",
+    label: "MAPS",
+    description: "MAPS provides accurate calibration, repair, and rental solutions for measuring and testing instruments across the Middle East."
   },
   about: {
     path: "/about",
     page: "about",
-    title: "About – Technolabs",
+    title: "About – MAPS",
     label: "About",
-    description: "Learn about Technolabs, our vision, mission, core values, and commitment to accurate calibration services."
+    description: "Learn about MAPS, our vision, mission, core values, and commitment to accurate calibration services."
   },
   clients: {
     path: "/clients",
     page: "clients",
-    title: "Our Clients – Technolabs",
+    title: "Our Clients – MAPS",
     label: "Our Clients",
-    description: "Meet the organizations that trust Technolabs for accurate calibration and instrument repair services."
+    description: "Meet the organizations that trust MAPS for accurate calibration and instrument repair services."
   },
   portfolio: {
     path: "/portfolio",
     page: "portfolio",
-    title: "Portfolio – Technolabs",
+    title: "Portfolio – MAPS",
     label: "Portfolio",
-    description: "View calibration equipment and laboratory work from Technolabs."
+    description: "View calibration equipment and laboratory work from MAPS."
   },
   services: {
     path: "/services",
     page: "services",
-    title: "Services – Technolabs",
+    title: "Services – MAPS",
     label: "Services",
-    description: "Explore Technolabs calibration services for electrical, temperature, pressure, dimension, force, mass, torque, volume, airflow, acoustic, flow, optical, and analytical and gas instruments."
+    description: "Explore MAPS calibration services for electrical, temperature, pressure, dimension, force, mass, torque, volume, airflow, acoustic, flow, optical, and analytical and gas instruments."
   },
   certificate: {
     path: "/certificate",
     page: "certificate",
-    title: "Certificate – Technolabs",
+    title: "Certificate – MAPS",
     label: "Our Certification",
-    description: "View Technolabs ISO/IEC 17025 certification, accreditation information, and verify a calibration certificate."
+    description: "View MAPS ISO/IEC 17025 certification, accreditation information, and verify a calibration certificate."
   },
   contact: {
     path: "/contact",
     page: "contact",
-    title: "Contact – Technolabs",
+    title: "Contact – MAPS",
     label: "Contact",
-    description: "Contact Technolabs in Riyadh for calibration, repair, technical support, and rental equipment services."
+    description: "Contact MAPS in Riyadh for calibration, repair, technical support, and rental equipment services."
   },
   "not-found": {
     path: "*",
     page: "not-found",
-    title: "Page Not Found – Technolabs",
+    title: "Page Not Found – MAPS",
     label: "Not Found",
     description: "The requested page could not be found."
   }

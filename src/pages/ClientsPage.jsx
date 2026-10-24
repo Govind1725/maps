@@ -1,5 +1,6 @@
 import PageHero from "../components/common/PageHero";
 import ClientMarquee from "../components/home/ClientMarquee";
+import CtaBand from "../components/home/CtaBand";
 
 export default function ClientsPage() {
   return (
@@ -9,6 +10,7 @@ export default function ClientsPage() {
         <ClientMarquee className="reveal" start={1} end={8} direction="left" />
         <ClientMarquee className="reveal" start={9} end={17} direction="right" />
       </section>
+      <CtaBand />
     </>
   );
 }

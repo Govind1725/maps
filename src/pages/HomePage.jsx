@@ -12,7 +12,7 @@ import { asset } from "../data/assets";
 export default function HomePage() {
   return (
     <>
-      <h1 className="visually-hidden">Technolabs calibration and instrument repair</h1>
+      <h1 className="visually-hidden">MAPS calibration and instrument repair</h1>
       <HeroCarousel />
       <CalibrationBanner />
       <section className="section about-section">
@@ -36,7 +36,7 @@ export default function HomePage() {
             align="start"
             eyebrow="Why Us"
             title="Why Partner with"
-            highlight="Technolabs"
+            highlight="MAPS"
           >
             <p>Partner with <strong>Techno Prime Company Limited (Techno Labs)</strong> for reliable, accurate, and professional calibration and repair solutions tailored to the needs of modern industries. Established in 2021 with operations across <strong>KSA, UAE, and the wider Middle East</strong>, we bring technical expertise and industry-focused services to ensure your measuring and testing instruments remain accurate, reliable, and fit for purpose. Our ISO/IEC 17025:2005 accreditation by EJ-JAS reflects our commitment to quality, technical competence, and internationally recognized calibration practices.</p>
             <p>With experience across <strong>Engineering, Aerospace, Pharma &amp; Food, Oil &amp; Gas, Automotive, Electrical, Cement, Defense &amp; Government, and Testing Laboratories</strong>, we understand the diverse requirements of different industrial environments. By partnering with Techno Labs, you gain a dependable technical partner focused on <strong>accuracy, compliance, timely service, and long-term equipment reliability</strong>, helping your organization maintain operational efficiency and meet quality and regulatory requirements.</p>

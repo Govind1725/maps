@@ -1,6 +1,7 @@
 import PageHero from "../components/common/PageHero";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
+import CtaBand from "../components/home/CtaBand";
 
 export default function CertificatePage() {
   return (
@@ -39,6 +40,7 @@ export default function CertificatePage() {
           </div>
         </div>
       </section>
+      <CtaBand />
     </>
   );
 }

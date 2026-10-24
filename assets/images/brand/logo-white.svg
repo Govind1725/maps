@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
+  <!-- Semi-Circular Top Arc Dome (Split Left/Right) -->
+  <path d="M 180 230 A 320 320 0 0 1 500 22" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+  <path d="M 500 22 A 320 320 0 0 1 820 230" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+
+  <!-- Main Title: MAPS -->
+  <g transform="translate(0, 0)">
+    <!-- Letter M -->
+    <path d="M 230 215 L 230 110 L 275 180 L 320 110 L 320 215 L 285 215 L 285 155 L 275 170 L 265 170 L 255 155 L 255 215 Z" fill="#ffffff" />
+
+    <!-- Letter A (Stylized with Calibration Needle) -->
+    <g transform="translate(340, 110)">
+      <!-- Outer A legs -->
+      <path d="M 55 0 L 10 105 L 42 105 L 55 75 L 75 75 L 88 105 L 120 105 L 75 0 Z" fill="#ffffff" />
+      <!-- Inner cutout -->
+      <polygon points="65,22 48,55 82,55" fill="#8fb4ff" />
+      <!-- Calibration Needle Arrow in 'A' -->
+      <path d="M 65 10 L 45 90 L 65 75 L 85 90 Z" fill="#ffffff" />
+      <path d="M 65 10 L 45 90 L 65 75 Z" fill="#d9e6ff" />
+      <!-- Pivot base circle -->
+      <circle cx="65" cy="98" r="9" fill="#ffffff" />
+    </g>
+
+    <!-- Letter P -->
+    <path d="M 490 110 L 490 215 L 525 215 L 525 175 L 565 175 C 585 175 600 162 600 142.5 C 600 123 585 110 565 110 Z M 525 135 L 560 135 C 568 135 574 138 574 142.5 C 574 147 568 150 560 150 L 525 150 Z" fill="#ffffff" />
+
+    <!-- Letter S -->
+    <path d="M 675 110 C 635 110 615 128 615 145 C 615 172 650 172 650 185 C 650 192 640 194 630 194 C 620 194 612 188 610 180 L 610 178 L 580 178 C 582 202 602 217 632 217 C 672 217 688 200 688 181 C 688 153 652 152 652 140 C 652 133 660 131 670 131 C 680 131 688 136 690 145 L 690 147 L 720 147 C 718 126 698 110 675 110 Z" fill="#ffffff" />
+  </g>
+
+  <!-- 5 Instrument Icons Row (y: 245 - 325) -->
+  <g transform="translate(195, 245)">
+    <!-- Icon 1: Vernier Caliper -->
+    <g fill="#ffffff">
+      <path d="M 12 5 L 12 75 L 18 75 L 18 20 L 32 20 L 32 75 L 38 75 L 38 35 L 85 35 L 85 5 Z M 18 5 L 32 5 L 32 15 L 18 15 Z" />
+      <rect x="42" y="25" width="40" height="25" rx="3" fill="#ffffff" />
+      <rect x="46" y="29" width="32" height="17" rx="1" fill="#03122e" />
+      <text x="62" y="42" font-size="9" font-family="'Inter', Arial, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">12.345</text>
+    </g>
+
+    <!-- Icon 2: Pressure Gauge -->
+    <g transform="translate(115, 0)">
+      <circle cx="40" cy="40" r="32" fill="none" stroke="#ffffff" stroke-width="4" />
+      <circle cx="40" cy="40" r="28" fill="none" stroke="#ffffff" stroke-width="1.5" />
+      <!-- Scale Ticks -->
+      <line x1="40" y1="14" x2="40" y2="20" stroke="#ffffff" stroke-width="2" />
+      <line x1="20" y1="20" x2="25" y2="24" stroke="#ffffff" stroke-width="2" />
+      <line x1="60" y1="20" x2="55" y2="24" stroke="#ffffff" stroke-width="2" />
+      <line x1="14" y1="40" x2="20" y2="40" stroke="#ffffff" stroke-width="2" />
+      <line x1="66" y1="40" x2="60" y2="40" stroke="#ffffff" stroke-width="2" />
+      <!-- Pointer Needle -->
+      <circle cx="40" cy="40" r="4" fill="#ffffff" />
+      <line x1="40" y1="40" x2="58" y2="22" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <text x="40" y="58" font-size="9" font-family="'Inter', Arial, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">bar</text>
+      <!-- Base connector stem -->
+      <rect x="36" y="72" width="8" height="12" fill="#ffffff" />
+    </g>
+
+    <!-- Icon 3: Thermometer -->
+    <g transform="translate(230, 0)">
+      <rect x="18" y="5" width="12" height="60" rx="6" fill="none" stroke="#ffffff" stroke-width="3" />
+      <circle cx="24" cy="65" r="14" fill="#d9e6ff" stroke="#ffffff" stroke-width="3" />
+      <rect x="21" y="25" width="6" height="35" fill="#d9e6ff" />
+      <!-- Temperature markings -->
+      <line x1="33" y1="15" x2="38" y2="15" stroke="#ffffff" stroke-width="2" />
+      <line x1="33" y1="25" x2="38" y2="25" stroke="#ffffff" stroke-width="2" />
+      <line x1="33" y1="35" x2="38" y2="35" stroke="#ffffff" stroke-width="2" />
+      <line x1="33" y1="45" x2="38" y2="45" stroke="#ffffff" stroke-width="2" />
+    </g>
+
+    <!-- Icon 4: Digital Multimeter -->
+    <g transform="translate(325, 0)">
+      <rect x="10" y="5" width="46" height="74" rx="6" fill="#ffffff" />
+      <!-- Screen -->
+      <rect x="16" y="11" width="34" height="20" rx="2" fill="#03122e" />
+      <text x="33" y="25" font-size="10" font-family="'Inter', Arial, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">0.000</text>
+      <!-- Rotary Dial -->
+      <circle cx="33" cy="48" r="10" fill="none" stroke="#03122e" stroke-width="2.5" />
+      <line x1="33" y1="48" x2="39" y2="42" stroke="#03122e" stroke-width="2.5" stroke-linecap="round" />
+      <!-- Test Leads -->
+      <path d="M 60 25 L 68 25 L 68 75" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <path d="M 64 35 L 72 35 L 72 75" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    </g>
+
+    <!-- Icon 5: Mechanical Balance Scale -->
+    <g transform="translate(440, 0)" fill="#ffffff">
+      <!-- Base & Column -->
+      <rect x="25" y="70" width="40" height="8" rx="2" />
+      <rect x="41" y="20" width="8" height="52" />
+      <circle cx="45" cy="20" r="6" />
+      <!-- Beam -->
+      <line x1="15" y1="20" x2="75" y2="20" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+      <!-- Left Pan -->
+      <line x1="15" y1="20" x2="5" y2="45" stroke="#ffffff" stroke-width="2" />
+      <line x1="15" y1="20" x2="25" y2="45" stroke="#ffffff" stroke-width="2" />
+      <path d="M 0 45 Q 15 55 30 45 Z" />
+      <!-- Right Pan -->
+      <line x1="75" y1="20" x2="65" y2="45" stroke="#ffffff" stroke-width="2" />
+      <line x1="75" y1="20" x2="85" y2="45" stroke="#ffffff" stroke-width="2" />
+      <path d="M 60 45 Q 75 55 90 45 Z" />
+    </g>
+  </g>
+
+  <!-- Separator Line -->
+  <rect x="200" y="348" width="295" height="5" fill="#ffffff" rx="2" />
+  <rect x="505" y="348" width="295" height="5" fill="#ffffff" rx="2" />
+
+  <!-- Sub-text 1: INSTRUMENTS & INDUSTRIAL SERVICES -->
+  <text x="500" y="392" font-size="34" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" text-anchor="middle" fill="#ffffff" letter-spacing="3.5">INSTRUMENTS &amp; INDUSTRIAL SERVICES</text>
+
+  <!-- Sub-text 2 Tagline: METROLOGY EXCELLENCE IN MEASUREMENT & CALIBRATION -->
+  <g transform="translate(0, 428)">
+    <line x1="120" y1="-7" x2="190" y2="-7" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <text x="500" y="0" font-size="19" font-family="'Inter', Arial, sans-serif" font-weight="800" text-anchor="middle" fill="#ffffff" letter-spacing="4.5">METROLOGY EXCELLENCE IN MEASUREMENT &amp; CALIBRATION</text>
+    <line x1="810" y1="-7" x2="880" y2="-7" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

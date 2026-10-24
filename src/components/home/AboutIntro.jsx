@@ -12,7 +12,7 @@ export function AboutIntro() {
         align="start"
         eyebrow="Welcome To"
         title="About"
-        highlight="Technolabs"
+        highlight="MAPS"
       >
         <p>{aboutText}</p>
       </SectionHeading>
@@ -20,7 +20,7 @@ export function AboutIntro() {
         <img
           className="about-image-main"
           src={asset("home/about-1.jpg")}
-          alt="Technolabs calibration laboratory"
+          alt="MAPS calibration laboratory"
           width="500"
           height="500"
           loading="lazy"
@@ -48,7 +48,7 @@ export function BrandStrip() {
         <SectionHeading
           className="brand-strip-copy section-heading--start"
           align="start"
-          eyebrow="Technolabs"
+          eyebrow="MAPS"
           title="One stop solution for all"
           highlight="Calibration needs"
         />

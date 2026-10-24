@@ -71,7 +71,7 @@ export default function CalibrationBanner() {
         <SectionHeading
           className="banner-copy"
           align="start"
-          eyebrow="TECHNOLABS"
+          eyebrow="MAPS"
           title="One stop solution for all"
           highlight="Calibration needs"
         >
@@ -92,7 +92,7 @@ export default function CalibrationBanner() {
           <div className="visual-wrapper">
             <img
               src={asset("home/calibration-banner.png")}
-              alt="Technolabs calibration equipment"
+              alt="MAPS calibration equipment"
               className="banner-instruments-img"
               width="1024"
               height="1024"

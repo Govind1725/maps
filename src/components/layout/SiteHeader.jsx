@@ -44,8 +44,8 @@ export default function SiteHeader() {
       <a className="skip-link" href="#content">Skip to content</a>
       <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
         <div className="header-inner">
-          <Link className="brand" to="/" aria-label="Technolabs home">
-            <img className="brand-logo" src={asset("brand/logo.svg")} alt="Technolabs" width="1125" height="337" />
+          <Link className="brand" to="/" aria-label="MAPS home">
+            <img className="brand-logo" src={asset("brand/maps-logo.png")} alt="MAPS" width="1125" height="337" />
           </Link>
           <div className="header-right">
             <nav

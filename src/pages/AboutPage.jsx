@@ -2,6 +2,7 @@ import PageHero from "../components/common/PageHero";
 import { AboutIntro, BrandStrip } from "../components/home/AboutIntro";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
+import CtaBand from "../components/home/CtaBand";
 
 export default function AboutPage() {
   return (
@@ -31,7 +32,7 @@ export default function AboutPage() {
           <img
             className="vision-image reveal reveal-zoom"
             src={asset("pages/lab-wide.webp")}
-            alt="Technolabs laboratory"
+            alt="MAPS laboratory"
             width="1600"
             height="900"
             loading="lazy"
@@ -70,6 +71,7 @@ export default function AboutPage() {
         </div>
       </section>
       <BrandStrip />
+      <CtaBand />
     </>
   );
 }

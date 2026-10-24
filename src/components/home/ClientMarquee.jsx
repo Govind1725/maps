@@ -9,7 +9,7 @@ function ClientGroup({ start, end, hidden = false }) {
   return (
     <div className="marquee-group" aria-hidden={hidden || undefined}>
       {clientImages.slice(start - 1, end).map((src, index) => (
-        <img src={src} alt={hidden ? "" : `Technolabs client ${start + index}`} width="245" height="145" loading="lazy" key={src} />
+        <img src={src} alt={hidden ? "" : `MAPS client ${start + index}`} width="245" height="145" loading="lazy" key={src} />
       ))}
     </div>
   );

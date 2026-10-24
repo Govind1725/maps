@@ -12,7 +12,7 @@ const quickLinks = [
 ];
 
 const whatsappHref =
-  "https://wa.me/966568015741?text=Hi%20*Technolabs*!%20I%E2%80%99d%20like%20to%20know%20more%20about%20Technolabs.%20Please%20share%20the%20details%20and%20available%20options.%20Thank%20you!";
+  "https://wa.me/966568015741?text=Hi%20*MAPS*!%20I%E2%80%99d%20like%20to%20know%20more%20about%20MAPS.%20Please%20share%20the%20details%20and%20available%20options.%20Thank%20you!";
 
 export default function SiteFooter() {
   const { pathname } = useLocation();
@@ -23,7 +23,7 @@ export default function SiteFooter() {
         <div className="container footer-main">
           <div className="footer-brand">
             <Link to="/">
-              <img className="footer-logo" src={asset("brand/logo.svg")} alt="Technolabs" width="1125" height="337" />
+              <img className="footer-logo" src={asset("brand/logo-white.svg")} alt="MAPS" width="1000" height="480" />
             </Link>
             <p>
               Your trusted partner for precision calibration and instrument repair.

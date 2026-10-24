@@ -164,7 +164,7 @@ export default function IndustryGrid() {
               {/* Center TL Logo Badge */}
               <div className="orbit-center">
                 <div className="center-badge">
-                  <img src={asset("brand/logo.svg")} alt="Technolabs" className="center-logo-img" width="85" height="85" />
+                  <img src={asset("brand/logo.svg")} alt="MAPS" className="center-logo-img" width="85" height="85" />
                 </div>
               </div>
 

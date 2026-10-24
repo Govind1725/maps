@@ -50,8 +50,8 @@ export default function App() {
   const routeKey = getRouteKey(location.pathname);
   const meta = routeMeta[routeKey] || {
     page: "not-found",
-    title: "Page Not Found – Technolabs",
-    description: "The requested Technolabs page could not be found."
+    title: "Page Not Found – MAPS",
+    description: "The requested MAPS page could not be found."
   };
 
   useEffect(() => {

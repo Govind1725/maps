@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { asset } from "../data/assets";
 import PageHero from "../components/common/PageHero";
 import { useBodyLock } from "../hooks/useBodyLock";
+import CtaBand from "../components/home/CtaBand";
 
 export default function PortfolioPage() {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function PortfolioPage() {
       <PageHero image="pages/lab-wide.webp" title="Portfolio" />
       <section className="container portfolio-gallery" aria-label="Portfolio">
         <button className="portfolio-item reveal reveal-zoom" type="button" ref={triggerRef} onClick={() => setOpen(true)} aria-label="Open portfolio image">
-          <img src={portfolioImage} alt="Technolabs portfolio" width="757" height="1600" loading="lazy" />
+          <img src={portfolioImage} alt="MAPS portfolio" width="757" height="1600" loading="lazy" />
         </button>
       </section>
       <div
@@ -51,8 +52,9 @@ export default function PortfolioPage() {
         }}
       >
         <button className="lightbox-close" type="button" aria-label="Close portfolio image" ref={closeRef} onClick={close}>×</button>
-        {open ? <img src={portfolioImage} alt="Technolabs portfolio" /> : null}
+        {open ? <img src={portfolioImage} alt="MAPS portfolio" /> : null}
       </div>
+      <CtaBand />
     </>
   );
 }

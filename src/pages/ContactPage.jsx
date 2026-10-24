@@ -2,6 +2,7 @@ import { useState } from "react";
 import PageHero from "../components/common/PageHero";
 import SectionHeading from "../components/common/SectionHeading";
 import { MailIcon, PhoneIcon, PinIcon, SendIcon } from "../components/common/Icons";
+import CtaBand from "../components/home/CtaBand";
 
 export default function ContactPage() {
   const [status, setStatus] = useState("");
@@ -92,6 +93,7 @@ export default function ContactPage() {
           </form>
         </div>
       </section>
+      <CtaBand />
     </>
   );
 }
