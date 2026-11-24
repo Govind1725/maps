@@ -2,48 +2,6 @@ import { Link } from "react-router-dom";
 import { asset } from "../../data/assets";
 import SectionHeading from "../common/SectionHeading";
 
-export function IsoBadgeIcon({ className = "" }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="8" r="6" />
-      <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-      <circle cx="12" cy="8" r="2" />
-    </svg>
-  );
-}
-
-export function TargetIcon({ className = "" }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="9" />
-      <circle cx="12" cy="12" r="4" />
-      <line x1="12" y1="2" x2="12" y2="5" />
-      <line x1="12" y1="19" x2="12" y2="22" />
-      <line x1="2" y1="12" x2="5" y2="12" />
-      <line x1="19" y1="12" x2="22" y2="12" />
-    </svg>
-  );
-}
-
-export function WrenchIcon({ className = "" }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-    </svg>
-  );
-}
-
-export function TestingIcon({ className = "" }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="12" width="4" height="8" rx="1" />
-      <rect x="10" y="7" width="4" height="13" rx="1" />
-      <rect x="17" y="4" width="4" height="16" rx="1" />
-      <path d="M3 10l5-4 5 3 7-5" />
-    </svg>
-  );
-}
-
 export function ArrowRightIcon({ className = "" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,35 +56,6 @@ export default function CalibrationBanner() {
               height="1024"
               loading="lazy"
             />
-
-            {/* Floating Interactive Badges */}
-            <div className="badge-item badge-iso">
-              <div className="badge-glass">
-                <IsoBadgeIcon className="badge-icon" />
-                <span>ISO/IEC 17025</span>
-              </div>
-            </div>
-
-            <div className="badge-item badge-calibration">
-              <div className="badge-glass">
-                <TargetIcon className="badge-icon" />
-                <span>Calibration</span>
-              </div>
-            </div>
-
-            <div className="badge-item badge-repair">
-              <div className="badge-glass">
-                <WrenchIcon className="badge-icon" />
-                <span>Repair</span>
-              </div>
-            </div>
-
-            <div className="badge-item badge-testing">
-              <div className="badge-glass">
-                <TestingIcon className="badge-icon" />
-                <span>Testing</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

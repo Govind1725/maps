@@ -17,22 +17,17 @@ export function AboutIntro() {
         <p>{aboutText}</p>
       </SectionHeading>
       <div className="about-visuals reveal reveal-right">
-        <img
+        <video
           className="about-image-main"
-          src={asset("home/about-1.jpg")}
-          alt="MAPS calibration laboratory"
-          width="500"
-          height="500"
-          loading="lazy"
-        />
-        <img
-          className="about-image-secondary"
-          src={asset("home/about-2.jpg")}
-          alt="Precision calibration equipment"
-          width="500"
-          height="500"
-          loading="lazy"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="MAPS logo animation"
+        >
+          <source src="/videos/mpas-logo-animation.webm" type="video/webm" />
+        </video>
         <div className="about-badge">
           <img src={asset("brand/ilac-mra.svg")} alt="ILAC MRA" width="432" height="439" loading="lazy" />
         </div>

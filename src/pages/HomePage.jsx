@@ -1,11 +1,17 @@
 import HeroCarousel from "../components/home/HeroCarousel";
+import CapabilityStrip from "../components/home/CapabilityStrip";
+import LogoWall from "../components/home/LogoWall";
 import CalibrationBanner from "../components/home/CalibrationBanner";
 import { AboutIntro } from "../components/home/AboutIntro";
+import ServicesShowcase from "../components/home/ServicesShowcase";
 import ServicesTabs from "../components/services/ServicesTabs";
+import TechSolutionsShowcase from "../components/home/TechSolutionsShowcase";
+import AccreditationSection from "../components/home/AccreditationSection";
 import IndustryGrid from "../components/home/IndustryGrid";
+import ProcurementSection from "../components/home/ProcurementSection";
+import CompetitiveEdgeSection from "../components/home/CompetitiveEdgeSection";
+import HomeContactSection from "../components/home/HomeContactSection";
 import CtaBand from "../components/home/CtaBand";
-import ClientMarquee from "../components/home/ClientMarquee";
-import SocialLinks from "../components/common/SocialLinks";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
 
@@ -14,21 +20,37 @@ export default function HomePage() {
     <>
       <h1 className="visually-hidden">MAPS calibration and instrument repair</h1>
       <HeroCarousel />
-      <CalibrationBanner />
+      <CapabilityStrip />
+      <LogoWall />
+
       <section className="section about-section">
         <AboutIntro />
       </section>
-      <section className="services-section">
+
+      <CalibrationBanner />
+      <ServicesShowcase />
+
+      <section className="section service-tabs-section">
         <div className="container">
           <SectionHeading
             className="reveal"
-            eyebrow="What We Offer"
-            title="Our Services"
-          />
+            eyebrow="Instrument Coverage"
+            title="Explore by"
+            highlight="Laboratory"
+          >
+            <p>
+              Review the full range of instruments we calibrate in each laboratory. Use the tabs to
+              move between disciplines.
+            </p>
+          </SectionHeading>
           <ServicesTabs />
         </div>
       </section>
+
+      <TechSolutionsShowcase />
+      <AccreditationSection />
       <IndustryGrid />
+
       <section className="section why-section">
         <div className="container why-grid">
           <SectionHeading
@@ -50,31 +72,30 @@ export default function HomePage() {
             loading="lazy"
           />
         </div>
-      </section>
-      <section className="section--compact social-wrap">
-        <div className="container">
-          <SectionHeading
-            className="social-panel reveal reveal-zoom"
-            eyebrow="Stay Connected"
-            title="Things That"
-            highlight="Matter"
-          >
-            <p>Join us on Social Media to explore our Wide range of services and latest updates</p>
-            <SocialLinks />
-          </SectionHeading>
+        <div className="container why-stats reveal" aria-label="Key company figures">
+          <div className="why-stat">
+            <strong>2021</strong>
+            <span>Established</span>
+          </div>
+          <div className="why-stat">
+            <strong>13</strong>
+            <span>Calibration Labs</span>
+          </div>
+          <div className="why-stat">
+            <strong>500+</strong>
+            <span>Enterprise Clients</span>
+          </div>
+          <div className="why-stat">
+            <strong>99.9%</strong>
+            <span>Accuracy &amp; Reliability</span>
+          </div>
         </div>
       </section>
-      <section className="section clients-section">
-        <SectionHeading
-          className="container reveal"
-          eyebrow="Trusted By"
-          title="Our Happy"
-          highlight="Clients"
-        />
-        <ClientMarquee start={1} end={8} direction="left" />
-        <ClientMarquee start={9} end={17} direction="right" />
-      </section>
-      <CtaBand />
+
+      <ProcurementSection />
+      <CtaBand staticBackground />
+      <CompetitiveEdgeSection />
+      <HomeContactSection />
     </>
   );
 }

@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import { ArrowIcon } from "../common/Icons";
 import SectionHeading from "../common/SectionHeading";
 
-export default function CtaBand() {
+export default function CtaBand({ staticBackground = false }) {
   return (
     <section className="section cta-section">
       <div className="container">
         <div className="cta-panel reveal reveal-zoom">
+          {staticBackground ? null : (
+            <video className="cta-video" autoPlay muted loop playsInline preload="none" aria-hidden="true">
+              <source src="/videos/cta-bg.webm" type="video/webm" />
+            </video>
+          )}
+          <div className="cta-video-overlay" aria-hidden="true" />
           <SectionHeading
             className="cta-heading"
             eyebrow="Accredited Calibration"

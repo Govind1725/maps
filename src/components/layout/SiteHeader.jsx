@@ -127,7 +127,6 @@ export default function SiteHeader() {
                 </li>
               </ul>
             </nav>
-            <Link className="header-cta" to="/contact">Get a Quote</Link>
             <button
               className="menu-toggle"
               type="button"

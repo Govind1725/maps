@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { asset } from "../../data/assets";
-import { ArrowIcon, ArrowLeftIcon, ArrowRightIcon } from "../common/Icons";
+import { ArrowIcon } from "../common/Icons";
 
 const slides = ["home/hero-1.jpg", "home/hero-2.jpg", "home/hero-3.jpg"];
-const interval = 5000;
 
 const staggerStep = 0.022;
+
+const rotatingPhrases = [
+  "Accredited Calibration",
+  "Instrument Repair",
+  "Industrial Testing",
+  "Traceable Compliance",
+];
 
 function StaggerText({ text, startDelay = 0 }) {
   return (
@@ -24,22 +30,43 @@ function StaggerText({ text, startDelay = 0 }) {
   );
 }
 
-export default function HeroCarousel() {
-  const [active, setActive] = useState(0);
+function Typewriter() {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState(rotatingPhrases[0]);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (query.matches) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
-    const timer = window.setInterval(() => {
-      setActive((index) => (index + 1) % slides.length);
-    }, interval);
-    return () => window.clearInterval(timer);
-  }, []);
+    const current = rotatingPhrases[index];
+    const complete = !deleting && text === current;
+    const cleared = deleting && text === "";
+    const delay = complete ? 1800 : deleting ? 32 : 62;
 
-  const move = (step) => {
-    setActive((index) => (index + step + slides.length) % slides.length);
-  };
+    const timer = window.setTimeout(() => {
+      if (complete) {
+        setDeleting(true);
+      } else if (cleared) {
+        setDeleting(false);
+        setIndex((value) => (value + 1) % rotatingPhrases.length);
+      } else {
+        setText(current.slice(0, text.length + (deleting ? -1 : 1)));
+      }
+    }, delay);
+
+    return () => window.clearTimeout(timer);
+  }, [text, deleting, index]);
+
+  return (
+    <span className="hero-typewriter" aria-hidden="true">
+      {text}
+      <i />
+    </span>
+  );
+}
+
+export default function HeroCarousel() {
+  const [active, setActive] = useState(0);
 
   const lineOne = "ISO/IEC 17025:2017";
   const lineTwo = "For Accredited Laboratory";
@@ -59,12 +86,17 @@ export default function HeroCarousel() {
       </div>
       <div className="hero-overlay">
         <div className="hero-content" key={active}>
+          <span className="hero-badge"><i /> ISO/IEC 17025:2017 Accredited Laboratory</span>
           <h2 className="hero-slide-title">
             <StaggerText text={lineOne} />
           </h2>
           <p className="hero-slide-copy">
             <StaggerText text={lineTwo} startDelay={lineTwoDelay} />
           </p>
+          <div className="hero-rotator">
+            <span>Built for</span>
+            <Typewriter />
+          </div>
         </div>
         <div className="hero-actions">
           <Link className="button hero-btn" to="/services">
@@ -87,12 +119,6 @@ export default function HeroCarousel() {
           ))}
         </div>
       </div>
-      <button className="hero-arrow hero-arrow--prev" type="button" aria-label="Previous slide" onClick={() => move(-1)}>
-        <ArrowLeftIcon />
-      </button>
-      <button className="hero-arrow hero-arrow--next" type="button" aria-label="Next slide" onClick={() => move(1)}>
-        <ArrowRightIcon />
-      </button>
       <div className="hero-scroll" aria-hidden="true">
         Scroll
         <span />

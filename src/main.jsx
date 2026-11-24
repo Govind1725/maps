@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "../assets/css/styles.css";
+import "../assets/css/redesign.css";
 
 document.documentElement.classList.add("js");
 
