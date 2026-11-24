@@ -3683,3 +3683,715 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   Mobile-first improvements (supplemental)
+   ============================================================ */
+
+/* Ensure images and media never overflow on mobile */
+img, video, svg {
+  max-width: 100%;
+}
+
+/* ── 1100px: CalibrationBanner single-column ── */
+@media (max-width: 1100px) {
+  .calibration-banner-section {
+    padding: 80px 0;
+  }
+
+  .banner-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .banner-copy {
+    text-align: center;
+  }
+
+  .banner-copy .section-eyebrow {
+    justify-content: center;
+  }
+
+  .banner-description {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .banner-visual {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  /* Edge section: stack on tablet */
+  .edge-card {
+    min-height: 420px;
+  }
+
+  /* Accreditation doc: smaller image col */
+  .accreditation-document {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+}
+
+/* ── 900px: Tablet adjustments ── */
+@media (max-width: 900px) {
+  /* CalibrationBanner */
+  .calibration-banner-section {
+    padding: 72px 0;
+  }
+
+  /* Tech solutions filters: scroll horizontally */
+  .tech-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tech-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tech-filter {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Procurement CTA: stack on tablet */
+  .procurement-cta {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .procurement-actions {
+    justify-content: center;
+  }
+
+  /* Home contact: full grid still OK at 900px, single col at 768 */
+
+  /* Capability strip: 3 cols at 900 */
+  .capability-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ── 768px: Mobile landscape & small tablets ── */
+@media (max-width: 768px) {
+  /* Global typography */
+  h2 {
+    font-size: clamp(1.6rem, 5.5vw, 2.3rem);
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 72px 0;
+  }
+
+  /* CalibrationBanner */
+  .calibration-banner-section {
+    padding: 64px 0;
+  }
+
+  .banner-tech-bg {
+    display: none;
+  }
+
+  /* Capability strip: 2×3 on mobile landscape */
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  /* Tech solutions section */
+  .tech-solutions {
+    padding: 80px 0;
+  }
+
+  .tech-header {
+    margin-bottom: 32px;
+  }
+
+  .tech-header h2 {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+  }
+
+  /* Tech cards: 1 col */
+  .tech-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tech stats: 2×2 */
+  .tech-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-stats > div:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  .tech-stats > div:nth-child(4) {
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  /* Procurement */
+  .procurement-section {
+    padding: 80px 0;
+  }
+
+  .procurement-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .procurement-cta {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+    text-align: center;
+  }
+
+  .procurement-actions {
+    justify-content: center;
+  }
+
+  /* Edge section */
+  .edge-section {
+    padding: 72px 0;
+  }
+
+  .edge-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .edge-card {
+    min-height: 480px;
+  }
+
+  .edge-content {
+    padding: 36px 28px;
+  }
+
+  .social-panel {
+    padding: 32px 24px;
+  }
+
+  /* Home contact */
+  .home-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-contact-copy h2 {
+    font-size: clamp(1.7rem, 5.5vw, 2.5rem);
+  }
+
+  .home-contact-copy p {
+    max-width: 100%;
+  }
+
+  /* About grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-visuals {
+    min-height: 320px;
+  }
+
+  /* Accreditation */
+  .accreditation-document {
+    grid-template-columns: 1fr;
+    padding: 22px;
+    gap: 24px;
+  }
+
+  .accreditation-document-image {
+    min-height: 240px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+
+  .footer-legal-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ── 640px: Mobile portrait ── */
+@media (max-width: 640px) {
+  /* Header */
+  .brand-logo {
+    width: 108px;
+  }
+
+  /* Hero */
+  .accreditation-hero {
+    min-height: 100svh;
+    padding: 48px 0 100px;
+  }
+
+  .hero-slide-title {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .hero-slide-copy {
+    font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+  }
+
+  .hero-rotator {
+    font-size: 0.88rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-dots {
+    bottom: 28px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  /* Capability strip */
+  .capability-strip {
+    padding: 24px 0;
+  }
+
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .capability-pillar {
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
+  .capability-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .capability-copy span {
+    font-size: 0.75rem;
+  }
+
+  .capability-copy small {
+    display: none;
+  }
+
+  /* Logo wall */
+  .logo-wall-group {
+    gap: 36px;
+    padding-right: 36px;
+  }
+
+  .logo-wall-group img {
+    width: 110px;
+    flex-basis: 110px;
+    height: 38px;
+  }
+
+  /* Section headings */
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
+  }
+
+  /* Calibration banner */
+  .calibration-banner-section {
+    padding: 60px 0;
+  }
+
+  .banner-visual {
+    max-width: 280px;
+  }
+
+  .banner-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Services showcase */
+  .offer-section {
+    padding: 72px 0;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .offer-card {
+    min-height: auto;
+  }
+
+  .rental-strip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 26px 20px;
+  }
+
+  /* Tech solutions */
+  .tech-solutions {
+    padding: 72px 0;
+  }
+
+  .tech-badge {
+    font-size: 0.65rem;
+  }
+
+  .tech-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 18px 12px;
+    gap: 0;
+  }
+
+  .tech-stats > div {
+    padding: 14px 10px;
+  }
+
+  .tech-stats > div:nth-child(2) {
+    border-left: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  .tech-stats > div:nth-child(3) {
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+    border-left: 0;
+  }
+
+  .tech-stats > div:nth-child(4) {
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+    border-left: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  .tech-filter {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
+  .tech-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tech-banner {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .tech-icon-box {
+    margin-inline: auto;
+  }
+
+  .tech-banner-actions {
+    flex-direction: column;
+  }
+
+  .tech-banner-actions .btn-primary,
+  .tech-banner-actions .btn-ghost {
+    width: 100%;
+  }
+
+  /* Accreditation */
+  .accreditation-section {
+    padding: 72px 0;
+  }
+
+  .accreditation-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .accreditation-card {
+    padding: 20px;
+  }
+
+  /* Procurement */
+  .procurement-section {
+    padding: 72px 0;
+  }
+
+  .procurement-head {
+    margin-bottom: 36px;
+  }
+
+  .procurement-steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .procurement-step {
+    padding: 22px 18px;
+  }
+
+  .procurement-cta {
+    padding: 24px 18px;
+    gap: 20px;
+  }
+
+  .procurement-actions {
+    flex-direction: column;
+  }
+
+  .procurement-actions .btn-primary,
+  .procurement-actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CTA band */
+  .cta-panel {
+    padding: 60px 20px;
+    border-radius: 20px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-actions .button {
+    width: 100%;
+  }
+
+  /* Edge */
+  .edge-section {
+    padding: 60px 0;
+  }
+
+  .edge-card {
+    min-height: 500px;
+    border-radius: 22px;
+  }
+
+  .edge-content {
+    padding: 32px 22px;
+  }
+
+  .edge-content h2 {
+    font-size: clamp(1.7rem, 6vw, 2.4rem);
+  }
+
+  .social-panel {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  /* Home contact */
+  .home-contact-section {
+    padding: 72px 0;
+  }
+
+  .home-contact-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-contact-card {
+    min-height: 90px;
+    padding: 16px;
+  }
+
+  /* About */
+  .about-grid {
+    gap: 32px;
+  }
+
+  .about-visuals {
+    min-height: 300px;
+  }
+
+  .about-badge {
+    width: 72px;
+    height: 72px;
+  }
+
+  .about-badge img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding-top: 48px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  /* Page hero */
+  .page-hero {
+    min-height: 260px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Brand strip */
+  .brand-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .brand-strip-inner .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Buttons: full width on small screens when stacked */
+  .btn-primary,
+  .btn-ghost {
+    touch-action: manipulation;
+  }
+
+  /* WhatsApp FAB */
+  .whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ── 480px: Small phones ── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-slide-title {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+  }
+
+  .hero-badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Section eyebrow text */
+  .eyebrow-text {
+    font-size: 0.68rem;
+  }
+
+  /* Capability: single column */
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-pillar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Offer cards */
+  .offer-card {
+    padding: 20px 18px;
+  }
+
+  /* Tech: filters fully scrollable */
+  .tech-filter {
+    padding: 7px 10px;
+    font-size: 0.72rem;
+  }
+
+  /* Industries */
+  .orbit-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why stats */
+  .why-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .why-stat {
+    padding: 16px;
+  }
+
+  .why-stat strong {
+    font-size: 1.5rem;
+  }
+
+  /* Rental tags */
+  .rental-tags span {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Accreditation */
+  .accreditation-document-image {
+    min-height: 200px;
+  }
+
+  /* Tech stats: single column */
+  .tech-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stats > div {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+  }
+
+  .tech-stats > div:first-child {
+    border-top: 0;
+  }
+
+  /* Footer legal */
+  .footer-legal-inner {
+    text-align: center;
+  }
+}
