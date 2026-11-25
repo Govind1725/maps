@@ -8,11 +8,13 @@ const quickLinks = [
   { to: "/about", label: "About" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/certificate", label: "Our Certification" },
-  { to: "/contact", label: "Contact" }
+  { to: "/contact", label: "Contact" },
+  { to: "/insights", label: "Insights" },
+  { to: "/careers", label: "Careers" }
 ];
 
 const whatsappHref =
-  "https://wa.me/966568015741?text=Hi%20*MAPS*!%20I%E2%80%99d%20like%20to%20know%20more%20about%20MAPS.%20Please%20share%20the%20details%20and%20available%20options.%20Thank%20you!";
+  "https://wa.me/919585671997?text=Hi%20*MAPS*!%20I%E2%80%99d%20like%20to%20know%20more%20about%20MAPS.%20Please%20share%20the%20details%20and%20available%20options.%20Thank%20you!";
 
 export default function SiteFooter() {
   const { pathname } = useLocation();
@@ -47,6 +49,7 @@ export default function SiteFooter() {
             <ul className="footer-links">
               <li><Link to="/services">Calibration Services</Link></li>
               <li><Link to="/services">Rental Services</Link></li>
+              <li><Link to="/products">Equipment &amp; Rental</Link></li>
             </ul>
           </div>
           <div>
@@ -54,15 +57,21 @@ export default function SiteFooter() {
             <address className="footer-contact">
               <span className="footer-contact-item">
                 <PinIcon className="footer-contact-icon" />
-                <span>#1&amp;11, Ground Floor, 8303, Ayoub Ibn Wareth Street, Al Malaz, Riyadh-12841, KSA</span>
+                <span>
+                  2/944, Gandhinagar, Thenathopu Street,
+                  <br />
+                  108, Manimangalam Village, Padappai,
+                  <br />
+                  Kanchipuram - 601301
+                </span>
               </span>
-              <a className="footer-contact-item" href="mailto:info@technoprimeltd.com">
+              <a className="footer-contact-item" href="mailto:Maps.Instruments@gmail.com">
                 <MailIcon className="footer-contact-icon" />
-                <span>info@technoprimeltd.com</span>
+                <span>Maps.Instruments@gmail.com</span>
               </a>
-              <a className="footer-contact-item" href="tel:+966114644399">
+              <a className="footer-contact-item" href="tel:+919585671997">
                 <PhoneIcon className="footer-contact-icon" />
-                <span>+966 11 464 4399</span>
+                <span>+91 9585671997</span>
               </a>
             </address>
           </div>

@@ -2,6 +2,7 @@ import PageHero from "../components/common/PageHero";
 import { AboutIntro, BrandStrip } from "../components/home/AboutIntro";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
+import AboutTrustSection from "../components/additions/AboutTrustSection";
 import CtaBand from "../components/home/CtaBand";
 
 export default function AboutPage() {
@@ -70,6 +71,7 @@ export default function AboutPage() {
           </SectionHeading>
         </div>
       </section>
+      <AboutTrustSection />
       <BrandStrip />
       <CtaBand />
     </>

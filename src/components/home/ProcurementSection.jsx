@@ -62,8 +62,8 @@ export default function ProcurementSection() {
             <Link className="btn-primary" to="/contact">
               Start a Request <Glyph name="arrowRight" />
             </Link>
-            <a className="btn-ghost" href="tel:+966114644399">
-              <Glyph name="target" /> +966 11 464 4399
+            <a className="btn-ghost" href="tel:+919585671997">
+              <Glyph name="target" /> +91 9585671997
             </a>
           </div>
         </div>

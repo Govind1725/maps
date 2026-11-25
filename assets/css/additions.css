@@ -1,0 +1,443 @@
+/* ============================================================
+   MAPS — additive sections inspired by the reference site
+   Loaded after redesign.css. Existing components are untouched.
+   ============================================================ */
+
+.maps-add-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.maps-add-equipment .maps-add-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.maps-add-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary-soft), #e0f2fe);
+  color: var(--primary);
+}
+
+.maps-add-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+/* Insights cards and article pages */
+
+.maps-add-article-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.maps-add-article-card:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: var(--shadow);
+  transform: translateY(-6px);
+}
+
+.maps-add-article-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.maps-add-article-card > :not(img) {
+  margin-inline: 24px;
+}
+
+.maps-add-article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.maps-add-article-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.05rem;
+}
+
+.maps-add-article-card p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.maps-add-read-link,
+.maps-add-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.maps-add-read-link {
+  margin-top: auto;
+  padding-bottom: 24px;
+}
+
+.maps-add-read-link svg,
+.maps-add-card-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.maps-add-article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.maps-add-article-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 36px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.maps-add-article-detail img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.maps-add-article-detail h2 {
+  margin: 10px 0 14px;
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+}
+
+.maps-add-article-detail p {
+  color: var(--slate);
+  font-size: 0.92rem;
+}
+
+.maps-add-article-excerpt {
+  color: var(--primary) !important;
+  font-weight: 650;
+}
+
+/* Equipment cards */
+
+.maps-add-equipment-card,
+.maps-add-benefit-card,
+.maps-add-support-card,
+.maps-add-role {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.maps-add-equipment-card:hover,
+.maps-add-benefit-card:hover,
+.maps-add-support-card:hover,
+.maps-add-role:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+}
+
+.maps-add-equipment-card h3,
+.maps-add-benefit-card h3,
+.maps-add-support-card h3,
+.maps-add-role h3 {
+  margin: 18px 0 8px;
+  font-size: 1rem;
+}
+
+.maps-add-equipment-card p,
+.maps-add-benefit-card p,
+.maps-add-support-card p,
+.maps-add-role p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.maps-add-equipment-card ul {
+  margin: 16px 0 24px;
+  padding-left: 18px;
+  color: var(--slate);
+  font-size: 0.85rem;
+}
+
+.maps-add-equipment-card li + li {
+  margin-top: 6px;
+}
+
+.maps-add-card-link {
+  margin-top: auto;
+}
+
+/* Impartiality and support section */
+
+.maps-add-trust-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.maps-add-panel {
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.maps-add-panel h3 {
+  margin: 18px 0 12px;
+  font-size: 1.35rem;
+}
+
+.maps-add-panel p {
+  color: var(--slate);
+}
+
+.maps-add-panel ul {
+  margin: 18px 0;
+  padding-left: 20px;
+  color: var(--slate);
+  font-size: 0.9rem;
+}
+
+.maps-add-panel li + li {
+  margin-top: 8px;
+}
+
+.maps-add-panel blockquote {
+  margin: 22px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--primary);
+  border-radius: 0 12px 12px 0;
+  background: var(--primary-soft);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.maps-add-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Careers roles */
+
+.maps-add-role-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.maps-add-role-area {
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Calibration-lab section reduced to its custom-programme banner */
+
+.tech-solutions--banner-only {
+  padding: 72px 0;
+}
+
+.tech-solutions--banner-only .tech-banner {
+  margin-top: 0;
+}
+
+/* Shared inline call to action */
+
+.maps-add-inline-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 34px;
+  padding: 28px 32px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, var(--navy-soft), #11224a);
+  color: #e2e8f0;
+}
+
+.maps-add-inline-cta span {
+  max-width: 620px;
+  font-weight: 600;
+}
+
+/* Certificate verification */
+
+.maps-add-verify-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 60px;
+}
+
+.maps-add-verify-copy {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+.maps-add-verify-copy .section-eyebrow {
+  margin-inline: 0;
+}
+
+.maps-add-verify .verify-form h3 {
+  margin-top: 0;
+}
+
+.maps-add-verify .verify-form > p:not(.form-status):not(.verify-help) {
+  color: var(--slate);
+  font-size: 0.9rem;
+}
+
+.maps-add-verify .form-status:empty {
+  display: none;
+}
+
+.maps-add-verify .form-status.is-notice {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+}
+
+.maps-add-verify .form-status.is-pending {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.maps-add-verify .form-status.is-error {
+  background: #fef2f2;
+  color: var(--error);
+}
+
+.maps-add-verify .form-status.is-success {
+  background: #ecfdf5;
+  color: var(--success);
+}
+
+.maps-add-verify .verify-help {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .maps-add-card-grid,
+  .maps-add-equipment .maps-add-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .maps-add-trust-grid,
+  .maps-add-verify-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .maps-add-inline-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-add-card-grid,
+  .maps-add-equipment .maps-add-card-grid,
+  .maps-add-support-grid,
+  .maps-add-role-list {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-add-article-detail {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .maps-add-inline-cta {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .maps-add-article-card > :not(img) {
+    margin-inline: 20px;
+  }
+
+  .maps-add-equipment-card,
+  .maps-add-benefit-card,
+  .maps-add-support-card,
+  .maps-add-role {
+    padding: 24px;
+  }
+
+  .maps-add-panel {
+    padding: 26px;
+  }
+
+  .maps-add-verify .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-add-inline-cta .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maps-add-article-card,
+  .maps-add-equipment-card,
+  .maps-add-benefit-card,
+  .maps-add-support-card,
+  .maps-add-role {
+    transition: none;
+  }
+
+  .maps-add-article-card:hover,
+  .maps-add-equipment-card:hover,
+  .maps-add-benefit-card:hover,
+  .maps-add-support-card:hover,
+  .maps-add-role:hover {
+    transform: none;
+  }
+}

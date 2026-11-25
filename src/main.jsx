@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "../assets/css/styles.css";
 import "../assets/css/redesign.css";
+import "../assets/css/additions.css";
 
 document.documentElement.classList.add("js");
 

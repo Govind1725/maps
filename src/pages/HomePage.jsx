@@ -3,13 +3,11 @@ import CapabilityStrip from "../components/home/CapabilityStrip";
 import LogoWall from "../components/home/LogoWall";
 import CalibrationBanner from "../components/home/CalibrationBanner";
 import { AboutIntro } from "../components/home/AboutIntro";
+import CoreServicesSection from "../components/home/CoreServicesSection";
 import ServicesShowcase from "../components/home/ServicesShowcase";
-import ServicesTabs from "../components/services/ServicesTabs";
 import TechSolutionsShowcase from "../components/home/TechSolutionsShowcase";
-import AccreditationSection from "../components/home/AccreditationSection";
 import IndustryGrid from "../components/home/IndustryGrid";
-import ProcurementSection from "../components/home/ProcurementSection";
-import CompetitiveEdgeSection from "../components/home/CompetitiveEdgeSection";
+import InsightsSection from "../components/additions/InsightsSection";
 import HomeContactSection from "../components/home/HomeContactSection";
 import CtaBand from "../components/home/CtaBand";
 import SectionHeading from "../components/common/SectionHeading";
@@ -21,34 +19,16 @@ export default function HomePage() {
       <h1 className="visually-hidden">MAPS calibration and instrument repair</h1>
       <HeroCarousel />
       <CapabilityStrip />
-      <LogoWall />
 
       <section className="section about-section">
         <AboutIntro />
       </section>
 
       <CalibrationBanner />
+      <CoreServicesSection />
       <ServicesShowcase />
 
-      <section className="section service-tabs-section">
-        <div className="container">
-          <SectionHeading
-            className="reveal"
-            eyebrow="Instrument Coverage"
-            title="Explore by"
-            highlight="Laboratory"
-          >
-            <p>
-              Review the full range of instruments we calibrate in each laboratory. Use the tabs to
-              move between disciplines.
-            </p>
-          </SectionHeading>
-          <ServicesTabs />
-        </div>
-      </section>
-
       <TechSolutionsShowcase />
-      <AccreditationSection />
       <IndustryGrid />
 
       <section className="section why-section">
@@ -92,9 +72,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ProcurementSection />
+      <InsightsSection />
       <CtaBand staticBackground />
-      <CompetitiveEdgeSection />
+      <LogoWall />
       <HomeContactSection />
     </>
   );

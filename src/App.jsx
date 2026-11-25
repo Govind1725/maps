@@ -12,6 +12,9 @@ const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const CertificatePage = lazy(() => import("./pages/CertificatePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const InsightsPage = lazy(() => import("./pages/InsightsPage"));
+const CareersPage = lazy(() => import("./pages/CareersPage"));
+const ProductsPage = lazy(() => import("./pages/ProductsPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function LegacyRedirect({ to }) {
@@ -31,6 +34,9 @@ function RoutedContent() {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/certificate" element={<CertificatePage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/insights" element={<InsightsPage />} />
+      <Route path="/careers" element={<CareersPage />} />
+      <Route path="/products" element={<ProductsPage />} />
       <Route path="/index.html" element={<LegacyRedirect to="/" />} />
       <Route path="/about.html" element={<LegacyRedirect to="/about" />} />
       <Route path="/clients.html" element={<LegacyRedirect to="/clients" />} />

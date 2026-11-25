@@ -1,6 +1,8 @@
 import PageHero from "../components/common/PageHero";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
+import ProcurementSection from "../components/home/ProcurementSection";
+import CertificateVerificationSection from "../components/additions/CertificateVerificationSection";
 import CtaBand from "../components/home/CtaBand";
 
 export default function CertificatePage() {
@@ -40,6 +42,8 @@ export default function CertificatePage() {
           </div>
         </div>
       </section>
+      <ProcurementSection />
+      <CertificateVerificationSection />
       <CtaBand />
     </>
   );

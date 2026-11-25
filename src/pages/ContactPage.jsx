@@ -36,17 +36,23 @@ export default function ContactPage() {
             <article className="contact-card reveal reveal-left">
               <div className="contact-icon"><PinIcon /></div>
               <h2>Head Office</h2>
-              <p>#1&amp;11, Ground Floor, 8303, Ayoub Ibn Wareth Street, Al Malaz, Riyadh-12841, KSA</p>
+              <p>
+                2/944, Gandhinagar, Thenathopu Street,
+                <br />
+                108, Manimangalam Village, Padappai,
+                <br />
+                Kanchipuram - 601301
+              </p>
             </article>
             <article className="contact-card reveal reveal-zoom">
               <div className="contact-icon"><MailIcon /></div>
               <h2>Email Support</h2>
-              <a href="mailto:info@technoprimeltd.com">info@technoprimeltd.com</a>
+              <a href="mailto:Maps.Instruments@gmail.com">Maps.Instruments@gmail.com</a>
             </article>
             <article className="contact-card reveal reveal-right">
               <div className="contact-icon"><PhoneIcon /></div>
               <h2>Let&apos;s Talk</h2>
-              <a href="tel:+966114644399">+966 11 464 4399</a>
+              <a href="tel:+919585671997">+91 9585671997</a>
             </article>
           </div>
         </div>

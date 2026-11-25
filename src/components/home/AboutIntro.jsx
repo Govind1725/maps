@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { asset } from "../../data/assets";
 import { aboutText } from "../../data/siteData";
 import { ArrowIcon } from "../common/Icons";
 import SectionHeading from "../common/SectionHeading";
@@ -14,7 +13,9 @@ export function AboutIntro() {
         title="About"
         highlight="MAPS"
       >
-        <p>{aboutText}</p>
+        {aboutText.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
       </SectionHeading>
       <div className="about-visuals reveal reveal-right">
         <video
@@ -28,9 +29,6 @@ export function AboutIntro() {
         >
           <source src="/videos/mpas-logo-animation.webm" type="video/webm" />
         </video>
-        <div className="about-badge">
-          <img src={asset("brand/ilac-mra.svg")} alt="ILAC MRA" width="432" height="439" loading="lazy" />
-        </div>
       </div>
     </div>
   );

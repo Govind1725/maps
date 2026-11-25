@@ -46,7 +46,28 @@ export const routeMeta = {
     page: "contact",
     title: "Contact – MAPS",
     label: "Contact",
-    description: "Contact MAPS in Riyadh for calibration, repair, technical support, and rental equipment services."
+    description: "Contact MAPS in Kanchipuram for calibration, repair, technical support, and rental equipment services."
+  },
+  insights: {
+    path: "/insights",
+    page: "insights",
+    title: "Insights – MAPS",
+    label: "Insights",
+    description: "Practical calibration insights on ISO/IEC 17025, planning and instrument readiness from MAPS."
+  },
+  careers: {
+    path: "/careers",
+    page: "careers",
+    title: "Careers – MAPS",
+    label: "Careers",
+    description: "Explore career opportunities and the benefits of working with the MAPS calibration team."
+  },
+  products: {
+    path: "/products",
+    page: "products",
+    title: "Equipment & Rental – MAPS",
+    label: "Equipment & Rental",
+    description: "Explore MAPS instrument rental and supply options for electrical, pressure, temperature and dimensional equipment."
   },
   "not-found": {
     path: "*",
@@ -79,4 +100,7 @@ export const industries = [
   { label: "Gas & Oil Industry", title: "Gas & Oil Industry", icon: "gas-oil" }
 ];
 
-export const aboutText = "Techno Prime company limited (Techno Labs) was established in year 2021 having operations in KSA, & UAE covering the Middle East Region. Our Techno Labs is accredited for ISO/IEC 17025:2005 by EJ-JAS and SAC approval is in process. We provide calibration & repair services for measuring & testing instruments. We cover various industrial segments such as Engineering Industries, Aero Space, Pharma/Food Industries, Oil & Gas, Automotive industry, Electrical Industries, Cement Industries, Defense /Government Sector Industries, Testing Laboratories etc.";
+export const aboutText = [
+  "MAPS Instruments & Industrial Services was established in 2019 and is a calibration laboratory operating as per ISO/IEC 17025:2017, based in Padappai, Kanchipuram, Tamil Nadu. Our motto is “Metrology Excellence in Measurement & Calibration.”",
+  "We provide calibration services for measuring and testing instruments. We also supply all kinds of master instruments and measuring instruments, and we offer repair, service and maintenance, and instrument rental."
+];
