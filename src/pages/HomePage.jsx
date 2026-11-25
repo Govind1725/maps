@@ -9,7 +9,6 @@ import TechSolutionsShowcase from "../components/home/TechSolutionsShowcase";
 import IndustryGrid from "../components/home/IndustryGrid";
 import InsightsSection from "../components/additions/InsightsSection";
 import HomeContactSection from "../components/home/HomeContactSection";
-import CtaBand from "../components/home/CtaBand";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
 
@@ -73,7 +72,6 @@ export default function HomePage() {
       </section>
 
       <InsightsSection />
-      <CtaBand staticBackground />
       <LogoWall />
       <HomeContactSection />
     </>
