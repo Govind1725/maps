@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { asset } from "../../data/assets";
-import { rentalServices } from "../../data/siteData";
-import { serviceNavigation } from "../../data/serviceNavigation";
 import { useBodyLock } from "../../hooks/useBodyLock";
 import { ChevronIcon } from "../common/Icons";
 
@@ -38,6 +36,7 @@ export default function SiteHeader() {
 
   const isActive = (path) => pathname === path;
   const isAboutActive = aboutPaths.includes(pathname);
+  const isServicesActive = pathname === "/services" || pathname.startsWith("/services/");
 
   return (
     <site-header>
@@ -82,7 +81,7 @@ export default function SiteHeader() {
                   </div>
                 </li>
                 <li className={`nav-item nav-item--services${openPanel === "services" ? " is-open" : ""}`}>
-                  <Link className={`nav-link${isActive("/services") ? " is-active" : ""}`} to="/services">
+                  <Link className={`nav-link${isServicesActive ? " is-active" : ""}`} to="/services">
                     Services <Caret />
                   </Link>
                   <button
@@ -98,24 +97,14 @@ export default function SiteHeader() {
                     <div className="mega-column">
                       <h2 className="mega-title">Calibration</h2>
                       <span className="mega-label">Services</span>
-                      <ul>
-                        {serviceNavigation.map((service) => (
-                          <li key={service.id}>
-                            <Link to={`/services#${service.id}`}>{service.name}</Link>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                     <div className="mega-column mega-column--rental">
                       <h2 className="mega-title">Rental Equipment</h2>
                       <span className="mega-label">Services</span>
-                      <ul>
-                        {rentalServices.map((service) => (
-                          <li key={service}>
-                            <span className="mega-static">{service}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    </div>
+                    <div className="mega-column mega-column--core">
+                      <h2 className="mega-title">Core Services</h2>
+                      <span className="mega-label">Explore</span>
                     </div>
                   </div>
                 </li>

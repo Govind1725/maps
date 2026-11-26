@@ -34,6 +34,34 @@ export const routeMeta = {
     label: "Services",
     description: "Explore MAPS calibration services for electrical, temperature, pressure, dimension, force, mass, torque, volume, airflow, acoustic, flow, optical, and analytical and gas instruments."
   },
+  "service-consulting": {
+    path: "/services/consulting",
+    page: "service-consulting",
+    title: "Consulting Services – MAPS",
+    label: "Consulting Services",
+    description: "Explore MAPS consulting services for measurement strategy, compliance readiness, instrument lifecycle management and audit support."
+  },
+  "service-training": {
+    path: "/services/training",
+    page: "service-training",
+    title: "Training & Teaching Services – MAPS",
+    label: "Training & Teaching Services",
+    description: "Explore MAPS technical training and teaching services covering calibration fundamentals, measurement uncertainty and ISO/IEC 17025 awareness."
+  },
+  "service-equipment-rental": {
+    path: "/services/equipment-rental",
+    page: "service-equipment-rental",
+    title: "Industrial Equipment Rental – MAPS",
+    label: "Industrial Equipment Rental",
+    description: "Rent calibrated electrical, pressure, temperature and dimensional instruments from MAPS for projects and temporary facilities."
+  },
+  "service-equipment-sales": {
+    path: "/services/equipment-sales",
+    page: "service-equipment-sales",
+    title: "Industrial Equipment Sales – MAPS",
+    label: "Industrial Equipment Sales",
+    description: "Source precision measurement instruments and industrial tools with technical selection, documentation and after-sales support from MAPS."
+  },
   certificate: {
     path: "/certificate",
     page: "certificate",

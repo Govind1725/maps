@@ -57,7 +57,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <section className="section section--soft">
+      <section className="section section--soft" id="enquiry">
         <div className="container contact-form-wrap">
           <SectionHeading
             className="contact-form-copy reveal reveal-left"

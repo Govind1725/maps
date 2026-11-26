@@ -15,6 +15,10 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 const InsightsPage = lazy(() => import("./pages/InsightsPage"));
 const CareersPage = lazy(() => import("./pages/CareersPage"));
 const ProductsPage = lazy(() => import("./pages/ProductsPage"));
+const ConsultingServicePage = lazy(() => import("./pages/ConsultingServicePage"));
+const TrainingServicePage = lazy(() => import("./pages/TrainingServicePage"));
+const EquipmentRentalServicePage = lazy(() => import("./pages/EquipmentRentalServicePage"));
+const EquipmentSalesServicePage = lazy(() => import("./pages/EquipmentSalesServicePage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function LegacyRedirect({ to }) {
@@ -32,6 +36,10 @@ function RoutedContent() {
       <Route path="/clients" element={<ClientsPage />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/services" element={<ServicesPage />} />
+      <Route path="/services/consulting" element={<ConsultingServicePage />} />
+      <Route path="/services/training" element={<TrainingServicePage />} />
+      <Route path="/services/equipment-rental" element={<EquipmentRentalServicePage />} />
+      <Route path="/services/equipment-sales" element={<EquipmentSalesServicePage />} />
       <Route path="/certificate" element={<CertificatePage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/insights" element={<InsightsPage />} />

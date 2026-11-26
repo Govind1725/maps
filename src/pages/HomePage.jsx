@@ -35,12 +35,30 @@ export default function HomePage() {
           <SectionHeading
             className="why-copy reveal reveal-left"
             align="start"
-            eyebrow="Why Us"
-            title="Why Partner with"
-            highlight="MAPS"
+            eyebrow="Welcome To"
+            title={
+              <>
+                About <span className="title-highlight">MAPS</span>
+              </>
+            }
           >
-            <p>Partner with <strong>Techno Prime Company Limited (Techno Labs)</strong> for reliable, accurate, and professional calibration and repair solutions tailored to the needs of modern industries. Established in 2021 with operations across <strong>KSA, UAE, and the wider Middle East</strong>, we bring technical expertise and industry-focused services to ensure your measuring and testing instruments remain accurate, reliable, and fit for purpose. Our ISO/IEC 17025:2005 accreditation by EJ-JAS reflects our commitment to quality, technical competence, and internationally recognized calibration practices.</p>
-            <p>With experience across <strong>Engineering, Aerospace, Pharma &amp; Food, Oil &amp; Gas, Automotive, Electrical, Cement, Defense &amp; Government, and Testing Laboratories</strong>, we understand the diverse requirements of different industrial environments. By partnering with Techno Labs, you gain a dependable technical partner focused on <strong>accuracy, compliance, timely service, and long-term equipment reliability</strong>, helping your organization maintain operational efficiency and meet quality and regulatory requirements.</p>
+            <p>
+              Established in <strong>2019</strong>, MAPS Instruments &amp; Industrial Services is a
+              professional provider of calibration and industrial instrument solutions, based in
+              Padappai, Kanchipuram, Tamil Nadu.
+            </p>
+            <p>
+              Operating in accordance with ISO/IEC 17025:2017, we specialize in calibration of
+              measuring and testing instruments, supply of master and measuring instruments,
+              instrument repair, maintenance, servicing, and rental solutions.
+            </p>
+            <p>
+              With a commitment to accuracy, quality, and customer satisfaction, we help industries
+              maintain reliable measurements and operational efficiency.
+            </p>
+            <p>
+              <strong>Our Motto: Metrology Excellence in Measurement &amp; Calibration.</strong>
+            </p>
           </SectionHeading>
           <img
             className="why-image reveal reveal-right"
@@ -53,7 +71,7 @@ export default function HomePage() {
         </div>
         <div className="container why-stats reveal" aria-label="Key company figures">
           <div className="why-stat">
-            <strong>2021</strong>
+            <strong>2019</strong>
             <span>Established</span>
           </div>
           <div className="why-stat">

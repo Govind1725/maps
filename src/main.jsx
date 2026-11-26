@@ -5,6 +5,7 @@ import App from "./App";
 import "../assets/css/styles.css";
 import "../assets/css/redesign.css";
 import "../assets/css/additions.css";
+import "../assets/css/lab-sections.css";
 
 document.documentElement.classList.add("js");
 

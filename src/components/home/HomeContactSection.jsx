@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MailIcon, PhoneIcon, PinIcon } from "../common/Icons";
+import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "../common/Icons";
 import Glyph from "../common/Glyph";
 
 const whatsappHref =
@@ -52,7 +52,7 @@ export default function HomeContactSection() {
             </span>
           </div>
           <a className="home-contact-card" href={whatsappHref} target="_blank" rel="noreferrer">
-            <span className="home-contact-icon"><Glyph name="sparkles" /></span>
+            <span className="home-contact-icon"><WhatsAppIcon /></span>
             <span>
               <small>WhatsApp</small>
               <strong>Chat with our team</strong>
