@@ -1,0 +1,237 @@
+/* ============================================================
+   MAPS — Light / Dark theme layer
+   Loaded last so it can safely override hardcoded light surfaces.
+   The default remains the existing light design.
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Brand colours adapt to dark surfaces while keeping contrast. */
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --primary-soft: rgba(96, 165, 250, 0.14);
+  --cyan: #22d3ee;
+  --cyan-dark: #06b6d4;
+
+  --navy: #020617;
+  --navy-soft: #0b1220;
+
+  --ink: #f1f5f9;
+  --slate: #cbd5e1;
+  --muted: #94a3b8;
+  --line: #1e293b;
+  --line-dark: #334155;
+  --surface: #0f172a;
+  --surface-2: #162033;
+
+  --blue: #60a5fa;
+  --blue-dark: #3b82f6;
+  --blue-mid: #93c5fd;
+  --blue-soft: rgba(96, 165, 250, 0.14);
+  --accent: #22d3ee;
+  --accent-dark: #06b6d4;
+  --ivory: #0f172a;
+  --sand: #162033;
+
+  --text: #f1f5f9;
+  --body: #cbd5e1;
+  --line-strong: #334155;
+  --success: #34d399;
+  --error: #f87171;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px -6px rgba(0, 0, 0, 0.5);
+  --shadow: 0 10px 34px -16px rgba(0, 0, 0, 0.75);
+  --shadow-lg: 0 34px 80px -32px rgba(0, 0, 0, 0.85);
+  --ring: 0 0 0 3px rgba(96, 165, 250, 0.28);
+}
+
+/* ── Theme toggle (visible in both modes) ─────────────────── */
+
+.theme-toggle {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  margin-right: 10px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease),
+    background 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.35);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Page + header ────────────────────────────────────────── */
+
+:root[data-theme="dark"] body {
+  background: var(--surface);
+  color: var(--body);
+}
+
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .site-header.is-scrolled {
+  border-color: rgba(51, 65, 85, 0.8);
+  background: rgba(11, 18, 32, 0.94);
+}
+
+:root[data-theme="dark"] .site-header.is-scrolled {
+  box-shadow: 0 14px 40px -24px rgba(0, 0, 0, 0.9);
+}
+
+:root[data-theme="dark"] .nav-link,
+:root[data-theme="dark"] .mega-column a,
+:root[data-theme="dark"] .mega-static {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .submenu-toggle {
+  color: var(--muted);
+}
+
+:root[data-theme="dark"] .brand-logo {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .submenu,
+:root[data-theme="dark"] .mega-menu,
+:root[data-theme="dark"] .menu-toggle,
+:root[data-theme="dark"] .site-nav {
+  border-color: var(--line);
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: var(--surface-2);
+  color: #cbd5e1;
+}
+
+/* ── Light surfaces that must become dark ────────────────── */
+
+:root[data-theme="dark"] .section,
+:root[data-theme="dark"] .section--soft,
+:root[data-theme="dark"] .services-section,
+:root[data-theme="dark"] .cta-section,
+:root[data-theme="dark"] .social-panel,
+:root[data-theme="dark"] .clients-section,
+:root[data-theme="dark"] .clients-gallery,
+:root[data-theme="dark"] .about-section,
+:root[data-theme="dark"] .about-intro,
+:root[data-theme="dark"] .about-badge,
+:root[data-theme="dark"] .about-image-main,
+:root[data-theme="dark"] .service-tabs-section,
+:root[data-theme="dark"] .service-sections,
+:root[data-theme="dark"] .home-contact-section,
+:root[data-theme="dark"] .expertise-section,
+:root[data-theme="dark"] .procurement-section,
+:root[data-theme="dark"] .logo-wall,
+:root[data-theme="dark"] .accreditation-hero,
+:root[data-theme="dark"] .accreditation-card,
+:root[data-theme="dark"] .accreditation-document,
+:root[data-theme="dark"] .offer-card,
+:root[data-theme="dark"] .industry-card,
+:root[data-theme="dark"] .card-icon-badge,
+:root[data-theme="dark"] .card-footer,
+:root[data-theme="dark"] .certificate-card,
+:root[data-theme="dark"] .goal-card,
+:root[data-theme="dark"] .certificate-status,
+:root[data-theme="dark"] .portfolio-item,
+:root[data-theme="dark"] .contact-card,
+:root[data-theme="dark"] .contact-form,
+:root[data-theme="dark"] .vision-card,
+:root[data-theme="dark"] .service-tab,
+:root[data-theme="dark"] .service-drawer,
+:root[data-theme="dark"] .core-card,
+:root[data-theme="dark"] .maps-add-article-card,
+:root[data-theme="dark"] .maps-add-article-detail,
+:root[data-theme="dark"] .maps-add-role,
+:root[data-theme="dark"] .maps-add-panel,
+:root[data-theme="dark"] .svc-breadcrumb-wrap,
+:root[data-theme="dark"] .svc-outline-item,
+:root[data-theme="dark"] .svc-feature-card,
+:root[data-theme="dark"] .svc-offering-card,
+:root[data-theme="dark"] .svc-enquiry-panel,
+:root[data-theme="dark"] .svc-other-card,
+:root[data-theme="dark"] .lab-section--light,
+:root[data-theme="dark"] .lab-cat-card {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--body);
+}
+
+/* ── Text colours that were hardcoded for light backgrounds ─ */
+
+:root[data-theme="dark"] .expertise-desc,
+:root[data-theme="dark"] .service-list li,
+:root[data-theme="dark"] .card-title,
+:root[data-theme="dark"] .stat-lbl,
+:root[data-theme="dark"] .lab-title,
+:root[data-theme="dark"] .lab-cat-title {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .lab-intro,
+:root[data-theme="dark"] .lab-instrument-list li,
+:root[data-theme="dark"] .svc-intro-copy > p,
+:root[data-theme="dark"] .svc-overview-copy > p,
+:root[data-theme="dark"] .svc-feature-card p,
+:root[data-theme="dark"] .svc-step p,
+:root[data-theme="dark"] .svc-offering-card li,
+:root[data-theme="dark"] .svc-why-card p {
+  color: var(--slate);
+}
+
+/* ── Form controls ────────────────────────────────────────── */
+
+:root[data-theme="dark"] .form-field input,
+:root[data-theme="dark"] .form-field textarea,
+:root[data-theme="dark"] .form-field input:focus,
+:root[data-theme="dark"] .form-field textarea:focus {
+  border-color: var(--line-dark);
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+/* ── Small component accents ──────────────────────────────── */
+
+:root[data-theme="dark"] .core-services-grid .core-icon,
+:root[data-theme="dark"] .core-services-grid .core-pill,
+:root[data-theme="dark"] .lab-cat-icon {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+:root[data-theme="dark"] .lab-section--soft {
+  background: var(--surface-2);
+}
+
+/* Respect reduced-motion preferences for the toggle. */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -7,7 +7,6 @@ import CoreServicesSection from "../components/home/CoreServicesSection";
 import ServicesShowcase from "../components/home/ServicesShowcase";
 import TechSolutionsShowcase from "../components/home/TechSolutionsShowcase";
 import IndustryGrid from "../components/home/IndustryGrid";
-import InsightsSection from "../components/additions/InsightsSection";
 import HomeContactSection from "../components/home/HomeContactSection";
 import SectionHeading from "../components/common/SectionHeading";
 import { asset } from "../data/assets";
@@ -89,7 +88,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <InsightsSection />
       <LogoWall />
       <HomeContactSection />
     </>

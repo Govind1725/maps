@@ -23,9 +23,9 @@ export const routeMeta = {
   portfolio: {
     path: "/portfolio",
     page: "portfolio",
-    title: "Portfolio – MAPS",
+    title: "Our Portfolio – MAPS",
     label: "Portfolio",
-    description: "View calibration equipment and laboratory work from MAPS."
+    description: "Browse MAPS calibration, testing, equipment supply, rental, installation and training projects by category."
   },
   services: {
     path: "/services",

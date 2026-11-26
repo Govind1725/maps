@@ -9,6 +9,7 @@ import { useReveal } from "./hooks/useReveal";
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ClientsPage = lazy(() => import("./pages/ClientsPage"));
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
+const PortfolioDetailPage = lazy(() => import("./pages/PortfolioDetailPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const CertificatePage = lazy(() => import("./pages/CertificatePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -35,6 +36,7 @@ function RoutedContent() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/clients" element={<ClientsPage />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/portfolio/:projectId" element={<PortfolioDetailPage />} />
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/services/consulting" element={<ConsultingServicePage />} />
       <Route path="/services/training" element={<TrainingServicePage />} />

@@ -6,11 +6,20 @@ import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "../common/Icons";
 const quickLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/certificate", label: "Our Certification" },
   { to: "/contact", label: "Contact" },
   { to: "/insights", label: "Insights" },
   { to: "/careers", label: "Careers" }
+];
+
+const footerServices = [
+  { to: "/services", label: "Calibration Services" },
+  { to: "/services/consulting", label: "Consulting Services" },
+  { to: "/services/training", label: "Training & Teaching Services" },
+  { to: "/services/equipment-rental", label: "Industrial Equipment Rental" },
+  { to: "/services/equipment-sales", label: "Industrial Equipment Sales" }
 ];
 
 const whatsappHref =
@@ -30,7 +39,7 @@ export default function SiteFooter() {
             <p>
               Your trusted partner for precision calibration and instrument repair.
               <br />
-              Delivering accuracy and reliability across the Middle East.
+              Delivering accuracy and reliability from Padappai, Kanchipuram.
             </p>
             <SocialLinks />
           </div>
@@ -47,9 +56,13 @@ export default function SiteFooter() {
           <div>
             <h2 className="footer-heading">Services</h2>
             <ul className="footer-links">
-              <li><Link to="/services">Calibration Services</Link></li>
-              <li><Link to="/services">Rental Services</Link></li>
-              <li><Link to="/products">Equipment &amp; Rental</Link></li>
+              {footerServices.map((service) => (
+                <li key={service.to}>
+                  <Link className={pathname === service.to ? "is-active" : ""} to={service.to}>
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -69,6 +82,10 @@ export default function SiteFooter() {
                 <MailIcon className="footer-contact-icon" />
                 <span>Maps.Instruments@gmail.com</span>
               </a>
+              <a className="footer-contact-item" href="mailto:info.mapsinstruments@gmail.com">
+                <MailIcon className="footer-contact-icon" />
+                <span>info.mapsinstruments@gmail.com</span>
+              </a>
               <a className="footer-contact-item" href="tel:+919585671997">
                 <PhoneIcon className="footer-contact-icon" />
                 <span>+91 9585671997</span>
@@ -78,7 +95,7 @@ export default function SiteFooter() {
         </div>
         <div className="footer-legal">
           <div className="container footer-legal-inner">
-            <span>Copyright © 2026 Technoprime Ltd.</span>
+            <span>Copyright © 2026 MAPS Instruments &amp; Industrial Services.</span>
             <span>All Rights Reserved</span>
             <span>
               Designed By :{" "}

@@ -45,9 +45,9 @@ export default function ServiceDrawer() {
         <span>Our Services</span>
       </button>
       <div className={`drawer-backdrop${open ? " is-open" : ""}`} aria-hidden="true" onClick={close} />
-      <aside className={`service-drawer${open ? " is-open" : ""}`} id="service-drawer" aria-label="Our Services" aria-hidden={!open} inert={!open}>
+      <aside className={`service-drawer${open ? " is-open" : ""}`} id="service-drawer" aria-label="Calibration Services" aria-hidden={!open} inert={!open}>
         <div className="drawer-header">
-          <h2>Our Services</h2>
+          <h2>Calibration Services</h2>
           <button className="drawer-close" type="button" aria-label="Close services" ref={closeRef} onClick={close}>×</button>
         </div>
         <ul className="drawer-list">

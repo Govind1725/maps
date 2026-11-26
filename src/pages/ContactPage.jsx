@@ -47,7 +47,11 @@ export default function ContactPage() {
             <article className="contact-card reveal reveal-zoom">
               <div className="contact-icon"><MailIcon /></div>
               <h2>Email Support</h2>
-              <a href="mailto:Maps.Instruments@gmail.com">Maps.Instruments@gmail.com</a>
+              <p>
+                <a href="mailto:Maps.Instruments@gmail.com">Maps.Instruments@gmail.com</a>
+                <br />
+                <a href="mailto:info.mapsinstruments@gmail.com">info.mapsinstruments@gmail.com</a>
+              </p>
             </article>
             <article className="contact-card reveal reveal-right">
               <div className="contact-icon"><PhoneIcon /></div>

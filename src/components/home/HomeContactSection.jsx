@@ -38,6 +38,13 @@ export default function HomeContactSection() {
               <strong>Maps.Instruments@gmail.com</strong>
             </span>
           </a>
+          <a className="home-contact-card" href="mailto:info.mapsinstruments@gmail.com">
+            <span className="home-contact-icon"><MailIcon /></span>
+            <span>
+              <small>Email us</small>
+              <strong>info.mapsinstruments@gmail.com</strong>
+            </span>
+          </a>
           <div className="home-contact-card">
             <span className="home-contact-icon"><PinIcon /></span>
             <span>

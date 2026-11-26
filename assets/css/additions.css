@@ -1162,15 +1162,46 @@ a.svc-enquiry-contact:hover {
   color: var(--primary);
 }
 
-/* Keep the existing services mega-menu intact while fitting the extra column. */
-@media (min-width: 1201px) {
+/* Full-width Services mega-menu with direct navigation links. */
+@media (min-width: 1101px) {
   .nav-item--services .mega-menu {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    position: fixed;
+    top: var(--header-height);
+    right: auto;
+    left: 50%;
+    width: min(calc(100vw - 48px), var(--container));
+    max-width: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 22px 26px;
+    transform: translateX(-50%);
   }
 
-  .nav-item--services .mega-column + .mega-column {
-    padding-left: 18px;
+  .nav-item--services:hover .mega-menu,
+  .nav-item--services:focus-within .mega-menu,
+  .nav-item--services.is-open .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%);
+  }
+}
+
+.nav-item--services .mega-column--links ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item--services .mega-column--links li + li {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .nav-item--services .mega-column--links ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1280,4 +1311,31 @@ a.svc-enquiry-contact:hover {
     width: 24px;
     height: 24px;
   }
+}
+
+/* ============================================================
+   Our Services drawer tab — dark blue with white label and icon
+   ============================================================ */
+
+.service-drawer-tab {
+  border-color: transparent;
+  background: #0a2f7c;
+  color: #fff;
+  box-shadow: -10px 12px 30px -16px rgba(10, 47, 124, 0.65);
+}
+
+.service-drawer-tab:hover,
+.service-drawer-tab:focus-visible {
+  border-color: transparent;
+  background: #041a45;
+  color: #fff;
+}
+
+.service-drawer-tab img {
+  filter: brightness(0) invert(1);
+}
+
+.service-drawer-tab:focus-visible {
+  outline: 3px solid rgba(10, 47, 124, 0.45);
+  outline-offset: -3px;
 }

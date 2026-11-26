@@ -249,6 +249,13 @@ export default function CoreServiceDetail({ service }) {
                   <strong>Maps.Instruments@gmail.com</strong>
                 </span>
               </a>
+              <a className="svc-enquiry-contact" href="mailto:info.mapsinstruments@gmail.com">
+                <span className="svc-enquiry-icon"><MailIcon /></span>
+                <span>
+                  <small>Email us</small>
+                  <strong>info.mapsinstruments@gmail.com</strong>
+                </span>
+              </a>
               <div className="svc-enquiry-contact">
                 <span className="svc-enquiry-icon"><PinIcon /></span>
                 <span>

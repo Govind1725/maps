@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { asset } from "../../data/assets";
 import { useBodyLock } from "../../hooks/useBodyLock";
 import { ChevronIcon } from "../common/Icons";
+import ThemeToggle from "../common/ThemeToggle";
 
-const aboutPaths = ["/about", "/clients", "/portfolio"];
+const isPortfolioPath = (pathname) => pathname.startsWith("/portfolio");
 
 function Caret() {
   return <ChevronIcon />;
@@ -35,7 +36,8 @@ export default function SiteHeader() {
   }, []);
 
   const isActive = (path) => pathname === path;
-  const isAboutActive = aboutPaths.includes(pathname);
+  const isAboutActive = pathname === "/about" || pathname === "/clients";
+  const isPortfolioActive = isPortfolioPath(pathname);
   const isServicesActive = pathname === "/services" || pathname.startsWith("/services/");
 
   return (
@@ -61,6 +63,9 @@ export default function SiteHeader() {
               <ul className="nav-list">
                 <li className="nav-item">
                   <Link className={`nav-link${isActive("/") ? " is-active" : ""}`} to="/">Home</Link>
+                </li>
+                <li className={`nav-item nav-item--portfolio${isPortfolioActive ? " is-active" : ""}`}>
+                  <Link className={`nav-link${isPortfolioActive ? " is-active" : ""}`} to="/portfolio">Portfolio</Link>
                 </li>
                 <li className={`nav-item nav-item--about${openPanel === "about" ? " is-open" : ""}`}>
                   <Link className={`nav-link${isAboutActive ? " is-active" : ""}`} to="/about">
@@ -94,17 +99,14 @@ export default function SiteHeader() {
                     <Caret />
                   </button>
                   <div className="mega-menu">
-                    <div className="mega-column">
-                      <h2 className="mega-title">Calibration</h2>
-                      <span className="mega-label">Services</span>
-                    </div>
-                    <div className="mega-column mega-column--rental">
-                      <h2 className="mega-title">Rental Equipment</h2>
-                      <span className="mega-label">Services</span>
-                    </div>
-                    <div className="mega-column mega-column--core">
-                      <h2 className="mega-title">Core Services</h2>
-                      <span className="mega-label">Explore</span>
+                    <div className="mega-column mega-column--links">
+                      <ul>
+                        <li><Link to="/services">Calibration Services</Link></li>
+                        <li><Link to="/services/consulting">Consulting Services</Link></li>
+                        <li><Link to="/services/training">Training &amp; Teaching Services</Link></li>
+                        <li><Link to="/services/equipment-rental">Industrial Equipment Rental</Link></li>
+                        <li><Link to="/services/equipment-sales">Industrial Equipment Sales</Link></li>
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -116,6 +118,7 @@ export default function SiteHeader() {
                 </li>
               </ul>
             </nav>
+            <ThemeToggle />
             <button
               className="menu-toggle"
               type="button"
