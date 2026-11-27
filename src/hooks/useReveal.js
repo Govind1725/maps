@@ -6,12 +6,24 @@ export function useReveal(routeKey) {
 
     if (!("IntersectionObserver" in window) || reduceMotion) {
       const showAll = () => {
-        document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+        document.querySelectorAll(".reveal:not(.is-visible)").forEach((element) => {
+          element.classList.add("is-visible");
+        });
       };
       showAll();
-      const showObserver = new MutationObserver(showAll);
+      let rafId = 0;
+      const showObserver = new MutationObserver(() => {
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+          rafId = 0;
+          showAll();
+        });
+      });
       showObserver.observe(document.body, { childList: true, subtree: true });
-      return () => showObserver.disconnect();
+      return () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        showObserver.disconnect();
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -22,25 +34,34 @@ export function useReveal(routeKey) {
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -45px" }
+      { threshold: 0.05, rootMargin: "0px 0px -10px" }
     );
 
     const observed = new WeakSet();
     const scan = () => {
-      const elements = [...document.querySelectorAll(".reveal:not(.is-visible)")];
-      elements.forEach((element, index) => {
-        if (observed.has(element)) return;
+      const elements = document.querySelectorAll(".reveal:not(.is-visible)");
+      for (let i = 0; i < elements.length; i += 1) {
+        const element = elements[i];
+        if (observed.has(element)) continue;
         observed.add(element);
-        element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+        element.style.transitionDelay = `${Math.min(i % 4, 3) * 60}ms`;
         observer.observe(element);
-      });
+      }
     };
 
     scan();
-    const mutationObserver = new MutationObserver(scan);
+    let rafId = 0;
+    const mutationObserver = new MutationObserver(() => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = 0;
+        scan();
+      });
+    });
     mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
+      if (rafId) cancelAnimationFrame(rafId);
       mutationObserver.disconnect();
       observer.disconnect();
     };

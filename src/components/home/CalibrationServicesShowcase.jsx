@@ -130,7 +130,7 @@ export default function CalibrationServicesShowcase() {
 
               return (
                 <article
-                  key={`${lab.id}-${offset}`}
+                  key={lab.id}
                   className={`cal-showcase-card ${
                     isCenter ? "is-center" : "is-side"
                   } cal-showcase-pos-${offset < 0 ? `m${Math.abs(offset)}` : offset}`}
@@ -147,6 +147,7 @@ export default function CalibrationServicesShowcase() {
                       src={asset(imgPath)}
                       alt={lab.name}
                       loading="lazy"
+                      decoding="async"
                     />
                     <span className="cal-showcase-badge">{lab.number}</span>
                   </div>

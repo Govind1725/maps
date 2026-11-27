@@ -12,6 +12,8 @@
 .lab-section {
   padding: 96px 0;
   border-bottom: 1px solid var(--line, #e2e8f0);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 .lab-section--light {
   background: #fff;
