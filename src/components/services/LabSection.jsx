@@ -9,7 +9,7 @@ export default function LabSection({ lab, index }) {
   const isEven = index % 2 === 0;
 
   return (
-    <section className={`lab-section reveal ${isEven ? "lab-section--light" : "lab-section--soft"}`} id={lab.id}>
+    <section className={`lab-section ${isEven ? "lab-section--light" : "lab-section--soft"}`} id={lab.id}>
       <div className="container">
 
         {/* ── Header ── */}
@@ -66,7 +66,7 @@ export default function LabSection({ lab, index }) {
         </div>
 
         {/* ── Category grid ── */}
-        <div className="lab-categories reveal">
+        <div className="lab-categories">
           {lab.categories.map((cat) => (
             <div className="lab-cat-card" key={cat.heading}>
               <div className="lab-cat-header">
