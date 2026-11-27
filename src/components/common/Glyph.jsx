@@ -50,6 +50,8 @@ const paths = {
   ),
   arrowRight: <path d="M5 12h14m-6-6 6 6-6 6" />,
   arrowUpRight: <path d="M7 7h10v10M7 17 17 7" />,
+  chevronLeft: <path d="m15 18-6-6 6-6" />,
+  chevronRight: <path d="m9 18 6-6-6-6" />,
   zap: <path d="M13 2 4 14h7l-1 8 9-12h-7z" />,
   sparkles: (
     <>

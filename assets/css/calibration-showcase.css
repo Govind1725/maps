@@ -1,0 +1,441 @@
+/* ============================================================
+   CALIBRATION SERVICES SHOWCASE
+   Inspired by stacked asymmetric category showcase, styled in
+   MAPS brand tokens, typography, and light/dark theme support.
+   ============================================================ */
+
+.cal-showcase-section {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+:root[data-theme="dark"] .cal-showcase-section {
+  background: var(--navy);
+}
+
+.cal-showcase-layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ── Left Column (1/3) ── */
+.cal-showcase-left {
+  flex: 0 0 36%;
+  max-width: 36%;
+  z-index: 25;
+}
+
+.cal-showcase-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.cal-showcase-title {
+  margin: 0 0 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 3.6vw, 3.35rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.cal-showcase-subtitle {
+  margin: 0 0 28px;
+  color: var(--slate);
+  font-size: clamp(0.95rem, 1.15vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+/* Controls */
+.cal-showcase-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.cal-showcase-arrow {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--line-dark, #cbd5e1);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease),
+    color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.cal-showcase-arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.cal-showcase-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cal-showcase-active-name {
+  margin-left: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pill / dot indicators */
+.cal-showcase-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.cal-showcase-dot {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--line-dark, #cbd5e1);
+  cursor: pointer;
+  transition: width 0.45s var(--ease), background 0.3s var(--ease);
+}
+
+.cal-showcase-dot.is-active {
+  width: 36px;
+  background: var(--primary);
+}
+
+.cal-showcase-dots--mobile {
+  display: none;
+}
+
+/* ── Right Column (2/3) ── */
+.cal-showcase-right {
+  flex: 1 1 64%;
+  min-width: 0;
+  position: relative;
+}
+
+.cal-showcase-stage {
+  position: relative;
+  height: 620px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Showcase Cards */
+.cal-showcase-card {
+  position: absolute;
+  border-radius: 34px;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 28px 28px;
+  transition: transform 0.6s var(--ease), opacity 0.55s var(--ease),
+    box-shadow 0.55s var(--ease), filter 0.55s var(--ease);
+  will-change: transform, opacity;
+}
+
+:root[data-theme="dark"] .cal-showcase-card {
+  background: var(--surface);
+  border-color: var(--line-dark);
+}
+
+.cal-showcase-card.is-center {
+  width: min(100%, 490px);
+  height: 590px;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  box-shadow: 0 36px 90px -24px rgba(15, 23, 42, 0.16),
+    0 0 0 1px rgba(37, 99, 235, 0.08);
+  cursor: default;
+}
+
+:root[data-theme="dark"] .cal-showcase-card.is-center {
+  box-shadow: 0 36px 90px -24px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(96, 165, 250, 0.22);
+}
+
+.cal-showcase-card.is-side {
+  width: 340px;
+  height: 460px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.cal-showcase-pos-m1 {
+  transform: translateX(-230px) scale(0.9);
+  opacity: 0.45;
+}
+
+.cal-showcase-pos-1 {
+  transform: translateX(230px) scale(0.9);
+  opacity: 0.45;
+}
+
+.cal-showcase-pos-m2 {
+  transform: translateX(-410px) scale(0.8);
+  opacity: 0.18;
+}
+
+.cal-showcase-pos-2 {
+  transform: translateX(410px) scale(0.8);
+  opacity: 0.18;
+}
+
+.cal-showcase-card.is-side:hover {
+  opacity: 0.72;
+}
+
+/* Media Container */
+.cal-showcase-media {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--surface-2);
+  flex-shrink: 0;
+}
+
+.cal-showcase-card.is-side .cal-showcase-media {
+  height: 260px;
+  filter: saturate(0.35) blur(1px);
+  opacity: 0.75;
+}
+
+.cal-showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.85s var(--ease);
+}
+
+.cal-showcase-card.is-center:hover .cal-showcase-media img {
+  transform: scale(1.07);
+}
+
+.cal-showcase-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #67e8f9;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Card Body */
+.cal-showcase-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding-top: 18px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.cal-showcase-head h3 {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.2rem, 1.75vw, 1.55rem);
+  font-weight: 750;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.cal-showcase-desc {
+  margin: 0;
+  color: var(--slate);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Instruments list pills */
+.cal-showcase-instruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cal-showcase-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--slate);
+  font-size: 0.72rem;
+  font-weight: 550;
+  line-height: 1.3;
+}
+
+.cal-showcase-pill--more {
+  background: var(--primary-soft);
+  border-color: transparent;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Explore More Button with subtle shimmer */
+.cal-showcase-explore {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark, #1d4ed8));
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 14px 28px -12px rgba(37, 99, 235, 0.65);
+  transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease);
+}
+
+.cal-showcase-explore::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.65s var(--ease);
+}
+
+.cal-showcase-explore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px -12px rgba(37, 99, 235, 0.8);
+  color: #fff;
+}
+
+.cal-showcase-explore:hover::after {
+  transform: translateX(100%);
+}
+
+.cal-showcase-explore svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ── Responsive Breakpoints ── */
+@media (max-width: 1100px) {
+  .cal-showcase-layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 36px;
+  }
+
+  .cal-showcase-left {
+    flex: none;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cal-showcase-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cal-showcase-controls {
+    justify-content: center;
+  }
+
+  .cal-showcase-dots--desktop {
+    display: none;
+  }
+
+  .cal-showcase-dots--mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cal-showcase-stage {
+    height: auto;
+    min-height: 540px;
+  }
+
+  .cal-showcase-card.is-side {
+    display: none;
+  }
+
+  .cal-showcase-card.is-center {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 530px;
+    padding: 20px;
+    border-radius: 26px;
+  }
+
+  .cal-showcase-media {
+    height: 200px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cal-showcase-card.is-center {
+    padding: 16px;
+    min-height: 500px;
+  }
+
+  .cal-showcase-media {
+    height: 180px;
+  }
+
+  .cal-showcase-explore {
+    width: 100%;
+  }
+}
