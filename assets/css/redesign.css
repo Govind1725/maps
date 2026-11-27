@@ -569,22 +569,6 @@ a {
   font-weight: 700;
 }
 
-.hero-rotating-phrase {
-  display: inline-block;
-  animation: hero-phrase-in 0.45s ease both;
-}
-
-@keyframes hero-phrase-in {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .hero-typewriter i {
   display: inline-block;
   width: 2px;
@@ -3666,10 +3650,6 @@ a {
   }
 
   .hero-typewriter i {
-    animation: none;
-  }
-
-  .hero-rotating-phrase {
     animation: none;
   }
 

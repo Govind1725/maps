@@ -31,24 +31,37 @@ function StaggerText({ text, startDelay = 0 }) {
   );
 }
 
-function RotatingPhrase() {
+function Typewriter() {
   const [index, setIndex] = useState(0);
+  const [text, setText] = useState(rotatingPhrases[0]);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
-    const timer = window.setInterval(() => {
-      setIndex((value) => (value + 1) % rotatingPhrases.length);
-    }, 2600);
+    const current = rotatingPhrases[index];
+    const complete = !deleting && text === current;
+    const cleared = deleting && text === "";
+    const delay = complete ? 1800 : deleting ? 32 : 62;
 
-    return () => window.clearInterval(timer);
-  }, []);
+    const timer = window.setTimeout(() => {
+      if (complete) {
+        setDeleting(true);
+      } else if (cleared) {
+        setDeleting(false);
+        setIndex((value) => (value + 1) % rotatingPhrases.length);
+      } else {
+        setText(current.slice(0, text.length + (deleting ? -1 : 1)));
+      }
+    }, delay);
+
+    return () => window.clearTimeout(timer);
+  }, [text, deleting, index]);
 
   return (
     <span className="hero-typewriter" aria-hidden="true">
-      <span className="hero-rotating-phrase" key={index}>
-        {rotatingPhrases[index]}
-      </span>
+      {text}
+      <i />
     </span>
   );
 }
@@ -83,7 +96,7 @@ export default function HeroCarousel() {
           </p>
           <div className="hero-rotator">
             <span>Built for :</span>
-            <RotatingPhrase />
+            <Typewriter />
           </div>
         </div>
         <div className="hero-actions">
