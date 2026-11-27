@@ -39,31 +39,31 @@ export function useReveal(routeKey) {
 
     const observed = new WeakSet();
     const scan = () => {
-      const elements = document.querySelectorAll(".reveal:not(.is-visible)");
-      for (let i = 0; i < elements.length; i += 1) {
-        const element = elements[i];
-        if (observed.has(element)) continue;
-        observed.add(element);
-        element.style.transitionDelay = `${Math.min(i % 4, 3) * 60}ms`;
-        observer.observe(element);
-      }
-    };
+        const elements = document.querySelectorAll(".reveal:not(.is-visible)");
+        for (let i = 0; i < elements.length; i += 1) {
+          const element = elements[i];
+          if (observed.has(element)) continue;
+          observed.add(element);
+          element.style.transitionDelay = `${Math.min(i % 4, 3) * 60}ms`;
+          observer.observe(element);
+    }
+  };
 
-    scan();
-    let rafId = 0;
-    const mutationObserver = new MutationObserver(() => {
-      if (rafId) return;
-      rafId = requestAnimationFrame(() => {
-        rafId = 0;
-        scan();
-      });
+  scan();
+  let rafId = 0;
+  const mutationObserver = new MutationObserver(() => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = 0;
+      scan();
     });
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
+  });
+  mutationObserver.observe(document.body, { childList: true, subtree: true });
 
-    return () => {
-      if (rafId) cancelAnimationFrame(rafId);
-      mutationObserver.disconnect();
-      observer.disconnect();
-    };
-  }, [routeKey]);
+  return () => {
+    if (rafId) cancelAnimationFrame(rafId);
+    mutationObserver.disconnect();
+    observer.disconnect();
+  };
+}, [routeKey]);
 }

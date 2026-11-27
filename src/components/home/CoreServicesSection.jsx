@@ -54,6 +54,27 @@ export default function CoreServicesSection() {
           </p>
         </SectionHeading>
 
+        <div className="rental-strip calibration-feature reveal">
+          <div className="rental-copy">
+            <span className="rental-badge">
+              <Glyph name="shield" /> Calibration Services
+            </span>
+            <h3>Precision calibration for every instrument you rely on</h3>
+            <p>
+              Accredited calibration of measuring and testing instruments, backed by traceable
+              documentation, master equipment and dependable turnaround across your site.
+            </p>
+          </div>
+          <div className="calibration-feature-actions">
+            <Link className="button" to="/services">
+              Explore Calibration <Glyph name="arrowRight" />
+            </Link>
+            <Link className="btn-ghost" to="/contact#enquiry">
+              Enquire Now <Glyph name="arrowUpRight" />
+            </Link>
+          </div>
+        </div>
+
         <div className="core-services-grid reveal">
           {services.map((svc) => (
             <article className="core-card" key={svc.id}>

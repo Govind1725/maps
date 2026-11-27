@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { aboutText } from "../../data/siteData";
+import { aboutMotto, aboutText } from "../../data/siteData";
 import { ArrowIcon } from "../common/Icons";
 import SectionHeading from "../common/SectionHeading";
 
@@ -9,13 +9,16 @@ export function AboutIntro() {
       <SectionHeading
         className="about-copy reveal reveal-left"
         align="start"
-        eyebrow="Welcome To"
-        title="About"
-        highlight="MAPS"
+        eyebrow="About"
+        title="MAPS Instruments"
+        highlight="& Industrial Services"
       >
         {aboutText.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
+        <p className="about-motto">
+          <strong>Our Motto:</strong> <em>{aboutMotto}</em>
+        </p>
       </SectionHeading>
       <div className="about-visuals reveal reveal-right">
         <video

@@ -569,6 +569,22 @@ a {
   font-weight: 700;
 }
 
+.hero-rotating-phrase {
+  display: inline-block;
+  animation: hero-phrase-in 0.45s ease both;
+}
+
+@keyframes hero-phrase-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-typewriter i {
   display: inline-block;
   width: 2px;
@@ -817,6 +833,18 @@ a {
   color: var(--slate);
   font-size: 1rem;
   line-height: 1.9;
+}
+
+.about-copy .about-motto {
+  margin-top: 26px;
+}
+
+.about-copy .about-motto strong {
+  color: #0f172a;
+}
+
+.about-copy .about-motto em {
+  font-style: italic;
 }
 
 .about-visuals {
@@ -1844,6 +1872,7 @@ a {
 .orbit-stage {
   position: relative;
   display: block;
+  height: auto;
   min-height: 0;
 }
 
@@ -1869,6 +1898,7 @@ a {
 
 .industry-card {
   display: flex;
+  width: 100%;
   height: 100%;
   flex-direction: column;
   padding: 18px;
@@ -3636,6 +3666,10 @@ a {
   }
 
   .hero-typewriter i {
+    animation: none;
+  }
+
+  .hero-rotating-phrase {
     animation: none;
   }
 

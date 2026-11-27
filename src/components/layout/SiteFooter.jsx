@@ -104,6 +104,9 @@ export default function SiteFooter() {
           </div>
         </div>
       </footer>
+      <a className="sticky-dial" href="tel:+919585671997" aria-label="Call MAPS">
+        <PhoneIcon />
+      </a>
       <a className="whatsapp" href={whatsappHref} target="_blank" rel="noreferrer" aria-label="Open WhatsApp chat">
         <WhatsAppIcon />
       </a>

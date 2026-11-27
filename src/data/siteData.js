@@ -129,6 +129,10 @@ export const industries = [
 ];
 
 export const aboutText = [
-  "MAPS Instruments & Industrial Services was established in 2019 and is a calibration laboratory operating as per ISO/IEC 17025:2017, based in Padappai, Kanchipuram, Tamil Nadu. Our motto is “Metrology Excellence in Measurement & Calibration.”",
-  "We provide calibration services for measuring and testing instruments. We also supply all kinds of master instruments and measuring instruments, and we offer repair, service and maintenance, and instrument rental."
+  "Established in 2019, MAPS Instruments & Industrial Services is a professional calibration and industrial instrumentation service provider based in Padappai, Kanchipuram, Tamil Nadu.",
+  "Operating in accordance with ISO/IEC 17025:2017, we are committed to delivering reliable calibration solutions that support measurement accuracy, quality, and operational efficiency across various industries.",
+  "We specialize in the calibration of measuring and testing instruments, along with the supply of a wide range of master instruments and precision measuring equipment. Our services also include instrument repair, servicing, maintenance, and rental solutions, providing customers with comprehensive support for their instrumentation requirements.",
+  "With a strong focus on quality, precision, and customer satisfaction, we aim to help industries maintain measurement reliability and achieve consistent performance through dependable technical solutions."
 ];
+
+export const aboutMotto = "Metrology Excellence in Measurement & Calibration.";

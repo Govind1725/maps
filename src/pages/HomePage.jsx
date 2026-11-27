@@ -4,7 +4,6 @@ import LogoWall from "../components/home/LogoWall";
 import CalibrationBanner from "../components/home/CalibrationBanner";
 import { AboutIntro } from "../components/home/AboutIntro";
 import CoreServicesSection from "../components/home/CoreServicesSection";
-import CalibrationServicesShowcase from "../components/home/CalibrationServicesShowcase";
 import ServicesShowcase from "../components/home/ServicesShowcase";
 import TechSolutionsShowcase from "../components/home/TechSolutionsShowcase";
 import IndustryGrid from "../components/home/IndustryGrid";
@@ -25,7 +24,6 @@ export default function HomePage() {
 
       <CalibrationBanner />
       <CoreServicesSection />
-      <CalibrationServicesShowcase />
       <ServicesShowcase />
 
       <IndustryGrid />

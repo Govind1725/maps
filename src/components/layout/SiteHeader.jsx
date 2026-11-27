@@ -67,23 +67,10 @@ export default function SiteHeader() {
                 <li className={`nav-item nav-item--portfolio${isPortfolioActive ? " is-active" : ""}`}>
                   <Link className={`nav-link${isPortfolioActive ? " is-active" : ""}`} to="/portfolio">Portfolio</Link>
                 </li>
-                <li className={`nav-item nav-item--about${openPanel === "about" ? " is-open" : ""}`}>
+                <li className="nav-item">
                   <Link className={`nav-link${isAboutActive ? " is-active" : ""}`} to="/about">
-                    About <Caret />
+                    About
                   </Link>
-                  <button
-                    className="submenu-toggle"
-                    type="button"
-                    aria-label="Toggle About submenu"
-                    aria-expanded={openPanel === "about"}
-                    onClick={() => setOpenPanel((panel) => (panel === "about" ? null : "about"))}
-                  >
-                    <Caret />
-                  </button>
-                  <div className="submenu">
-                    <Link to="/clients">Our Clients</Link>
-                    <Link to="/portfolio">Portfolio</Link>
-                  </div>
                 </li>
                 <li className={`nav-item nav-item--services${openPanel === "services" ? " is-open" : ""}`}>
                   <Link className={`nav-link${isServicesActive ? " is-active" : ""}`} to="/services">
